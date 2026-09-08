@@ -1,6 +1,5 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Globe, ExternalLink } from 'lucide-react';
-import LiveViewersFlag from './LiveViewersFlag';
 
 export default function Footer() {
   return (
@@ -102,11 +101,6 @@ export default function Footer() {
             </div>
           </div>
 
-        </div>
-
-        {/* Live Viewers Flag Counter Widget */}
-        <div className="py-8 border-b border-slate-800">
-          <LiveViewersFlag />
         </div>
 
         {/* Copyright */}

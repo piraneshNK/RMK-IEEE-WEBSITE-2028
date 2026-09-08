@@ -11,6 +11,7 @@ import SubmissionSection from './components/SubmissionSection';
 import TravelSection from './components/TravelSection';
 import TravelGrantSection from './components/TravelGrantSection';
 import VisaSection from './components/VisaSection';
+import LiveViewersFlag from './components/LiveViewersFlag';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -55,6 +56,13 @@ export default function App() {
 
         {/* Indian Visa Guide for Foreign Participants */}
         <VisaSection />
+
+        {/* Global Live Visitor Flag Counter Section - Above Footer */}
+        <div className="bg-[#040e1f] py-8 px-4 sm:px-6 lg:px-8 border-t border-blue-900/40">
+          <div className="max-w-7xl mx-auto">
+            <LiveViewersFlag />
+          </div>
+        </div>
 
       </main>
 

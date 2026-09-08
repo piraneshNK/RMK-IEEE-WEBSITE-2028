@@ -92,7 +92,7 @@ export default function SpeakersSection() {
         {/* Speakers Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {speakers.map((speaker, index) => (
-            <div
+            <article
               key={index}
               className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all overflow-hidden flex flex-col justify-between group"
             >
@@ -104,7 +104,9 @@ export default function SpeakersSection() {
                     {speaker.image ? (
                       <img
                         src={speaker.image}
-                        alt={speaker.name}
+                        alt={`Portrait of ${speaker.name}, ${speaker.role} at IEEE Photonics AI 2028`}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         onError={(e) => {
                           e.target.onerror = null;
@@ -157,7 +159,7 @@ export default function SpeakersSection() {
                 </div>
               )}
 
-            </div>
+            </article>
           ))}
         </div>
 

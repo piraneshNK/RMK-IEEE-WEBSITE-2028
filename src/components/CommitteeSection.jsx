@@ -205,14 +205,22 @@ export default function CommitteeSection() {
         {activeTab === 'organizing' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 animate-fadeIn">
             {filterBySearch(organizingChairs).map((item, idx) => (
-              <div key={idx} className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2">
+              <article key={idx} className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2">
                 <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#2563eb] bg-blue-100/60 px-2.5 py-0.5 rounded-full inline-block">
                   {item.role}
                 </span>
                 <h3 className="font-bold text-slate-900 text-base leading-snug">{item.name}</h3>
                 <p className="text-xs font-medium text-slate-700">{item.designation}</p>
-                <p className="text-[11px] text-slate-500">{item.affiliation}</p>
-              </div>
+                <p className="text-[11px] text-slate-500">
+                  {item.affiliation.includes("R.M.K") ? (
+                    <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="hover:text-[#2563eb] hover:underline transition-colors" title="Visit R.M.K. Home Page">
+                      {item.affiliation}
+                    </a>
+                  ) : (
+                    item.affiliation
+                  )}
+                </p>
+              </article>
             ))}
           </div>
         )}
@@ -221,14 +229,22 @@ export default function CommitteeSection() {
         {activeTab === 'patrons' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 animate-fadeIn">
             {filterBySearch(patronsList).map((item, idx) => (
-              <div key={idx} className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2">
+              <article key={idx} className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2">
                 <span className="text-[10px] font-extrabold uppercase tracking-wider text-purple-700 bg-purple-100/60 px-2.5 py-0.5 rounded-full inline-block">
                   {item.role}
                 </span>
                 <h3 className="font-bold text-slate-900 text-base leading-snug">{item.name}</h3>
                 <p className="text-xs font-medium text-slate-700">{item.designation}</p>
-                <p className="text-[11px] text-slate-500">{item.affiliation}</p>
-              </div>
+                <p className="text-[11px] text-slate-500">
+                  {item.affiliation.includes("R.M.K") ? (
+                    <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="hover:text-[#2563eb] hover:underline transition-colors" title="Visit R.M.K. Home Page">
+                      {item.affiliation}
+                    </a>
+                  ) : (
+                    item.affiliation
+                  )}
+                </p>
+              </article>
             ))}
           </div>
         )}
@@ -237,10 +253,10 @@ export default function CommitteeSection() {
         {activeTab === 'advisory' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 animate-fadeIn">
             {filterBySearch(advisoryMembers).map((item, idx) => (
-              <div key={idx} className="bg-slate-50 p-3.5 rounded-xl border border-slate-200/80 space-y-1">
+              <article key={idx} className="bg-slate-50 p-3.5 rounded-xl border border-slate-200/80 space-y-1">
                 <h4 className="font-bold text-slate-900 text-xs leading-snug">{item.name}</h4>
                 <p className="text-[11px] text-slate-500">{item.affiliation}</p>
-              </div>
+              </article>
             ))}
           </div>
         )}
@@ -249,10 +265,10 @@ export default function CommitteeSection() {
         {activeTab === 'tpc' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 animate-fadeIn">
             {filterBySearch(tpcMembers).map((item, idx) => (
-              <div key={idx} className="bg-slate-50 p-3.5 rounded-xl border border-slate-200/80 space-y-1">
+              <article key={idx} className="bg-slate-50 p-3.5 rounded-xl border border-slate-200/80 space-y-1">
                 <h4 className="font-bold text-slate-900 text-xs leading-snug">{item.name}</h4>
                 <p className="text-[11px] text-slate-500">{item.affiliation}</p>
-              </div>
+              </article>
             ))}
           </div>
         )}
@@ -261,11 +277,11 @@ export default function CommitteeSection() {
         {activeTab === 'womenInPhotonics' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 animate-fadeIn max-w-4xl mx-auto">
             {filterBySearch(womenInPhotonicsMembers).map((item, idx) => (
-              <div key={idx} className="bg-pink-50/50 p-4 rounded-xl border border-pink-100 space-y-1">
+              <article key={idx} className="bg-pink-50/50 p-4 rounded-xl border border-pink-100 space-y-1">
                 <span className="text-[10px] font-bold text-pink-700 uppercase tracking-wider block">Women in Photonics</span>
                 <h4 className="font-bold text-slate-900 text-sm">{item.name}</h4>
                 <p className="text-xs text-slate-600">{item.affiliation}</p>
-              </div>
+              </article>
             ))}
           </div>
         )}

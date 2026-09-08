@@ -15,7 +15,9 @@ export default function Footer() {
             <div className="flex items-center space-x-3">
               <img 
                 src="/logo.png" 
-                alt="IEEE Photonics AI 2028 Logo" 
+                alt="IEEE Photonics AI 2028 Official Footer Emblem Logo" 
+                loading="lazy"
+                decoding="async"
                 className="h-12 w-auto object-contain"
                 onError={(e) => {
                   e.target.onerror = null;
@@ -28,7 +30,7 @@ export default function Footer() {
             </p>
             <div className="text-xs text-slate-500 font-medium space-y-1">
               <p>Supported by the <span className="text-slate-300 font-semibold">IEEE AI Coalition</span> & <span className="text-blue-400 font-semibold">IEEE Photonics Society</span>.</p>
-              <p>Organized by <span className="text-slate-300 font-semibold">R.M.K. Engineering College (Autonomous)</span>.</p>
+              <p>Organized by <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-blue-400 font-semibold underline underline-offset-4 decoration-blue-400/40 hover:decoration-blue-400 transition-colors" title="Visit R.M.K. Engineering College Home Page">R.M.K. Engineering College (Autonomous)</a>.</p>
             </div>
           </div>
 
@@ -80,7 +82,7 @@ export default function Footer() {
 
               <div className="flex items-start space-x-2 pt-1">
                 <MapPin className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                <span className="leading-snug">ECE Dept, R.M.K. Engineering College, Kavaraipettai, Tiruvallur Dist, Tamil Nadu - 601206</span>
+                <span className="leading-snug">ECE Dept, <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-blue-400 font-semibold underline underline-offset-2 decoration-blue-400/40 hover:decoration-blue-400 transition-colors" title="Visit R.M.K. Engineering College Home Page">R.M.K. Engineering College</a>, Kavaraipettai, Tiruvallur Dist, Tamil Nadu - 601206</span>
               </div>
 
               <div className="flex items-center space-x-2">

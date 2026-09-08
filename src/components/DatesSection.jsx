@@ -63,7 +63,7 @@ export default function DatesSection() {
                   
                   {/* Content Card */}
                   <div className={`w-full sm:w-1/2 ${isEven ? 'sm:pl-8 text-left' : 'sm:pr-8 sm:text-right'} mb-4 sm:mb-0`}>
-                    <div className={`p-6 rounded-2xl border transition-all ${item.active ? 'bg-blue-50/60 border-blue-300 shadow-sm ring-2 ring-blue-500/20' : 'bg-white border-slate-200/80 shadow-sm'}`}>
+                    <article className={`p-6 rounded-2xl border transition-all ${item.active ? 'bg-blue-50/60 border-blue-300 shadow-sm ring-2 ring-blue-500/20' : 'bg-white border-slate-200/80 shadow-sm'}`}>
                       
                       <div className={`flex items-center space-x-2 mb-2 ${isEven ? 'sm:justify-start' : 'sm:justify-end'}`}>
                         <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full ${item.active ? 'bg-[#2563eb] text-white' : 'bg-slate-100 text-slate-700'}`}>
@@ -77,9 +77,25 @@ export default function DatesSection() {
                       </h3>
 
                       <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                        {item.desc}
+                        {item.desc.includes("RMK Engineering College") ? (
+                          <>
+                            Flagship international conference at{' '}
+                            <a 
+                              href="https://www.rmkec.ac.in/2023/" 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="text-[#2563eb] hover:underline font-semibold"
+                              title="Visit RMK Engineering College Home Page"
+                            >
+                              RMK Engineering College
+                            </a>{' '}
+                            Campus, Chennai, India.
+                          </>
+                        ) : (
+                          item.desc
+                        )}
                       </p>
-                    </div>
+                    </article>
                   </div>
 
                   {/* Node Icon */}

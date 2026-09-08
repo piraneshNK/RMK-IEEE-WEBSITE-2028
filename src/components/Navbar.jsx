@@ -28,10 +28,12 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           
           {/* Brand Logo */}
-          <a href="#" className="flex items-center space-x-3 group">
+          <a href="#hero" aria-label="Photonics AI 2028 Home" className="flex items-center space-x-3 group">
             <img 
               src="/logo.png" 
-              alt="IEEE Photonics AI 2028 Logo" 
+              alt="IEEE Photonics AI 2028 Official Emblem Logo" 
+              loading="lazy"
+              decoding="async"
               className="h-10 w-auto object-contain"
               onError={(e) => {
                 e.target.onerror = null;

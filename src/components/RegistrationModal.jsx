@@ -33,7 +33,9 @@ export default function RegistrationModal({ isOpen, onClose }) {
           <div className="flex items-center space-x-3">
             <img 
               src="/logo.png" 
-              alt="IEEE Photonics AI 2028 Logo" 
+              alt="IEEE Photonics AI 2028 Official Conference Registration Logo" 
+              loading="lazy"
+              decoding="async"
               className="h-8 w-auto"
               onError={(e) => {
                 e.target.onerror = null;

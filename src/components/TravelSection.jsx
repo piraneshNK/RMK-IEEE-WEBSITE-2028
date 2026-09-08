@@ -102,7 +102,7 @@ export default function TravelSection() {
             <span>STAY & TRANSPORTATION</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Hotel Accommodation Options Near RMKEC
+            Hotel Accommodation Options Near <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline" title="Visit RMKEC Home Page">RMKEC</a>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
             Click the live booking buttons to check current rates and availability on Booking.com.
@@ -150,7 +150,7 @@ export default function TravelSection() {
                 <thead className="bg-slate-100/80 text-slate-700 font-bold uppercase text-[10px] tracking-wider border-b border-slate-200">
                   <tr>
                     <th className="p-3.5">Hotel Name</th>
-                    <th className="p-3.5">Distance from RMK EC</th>
+                    <th className="p-3.5">Distance from <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="hover:underline text-slate-800" title="Visit RMK Engineering College Home Page">RMK EC</a></th>
                     <th className="p-3.5">Approx Tariff (INR/Night)</th>
                     <th className="p-3.5 text-right">Check Availability</th>
                   </tr>
@@ -226,7 +226,7 @@ export default function TravelSection() {
 
             <div className="p-3.5 bg-blue-950/80 rounded-xl border border-blue-800/60 text-xs text-blue-200">
               <span className="font-bold text-white block mb-0.5">Conference Shuttle Service:</span>
-              <span>Shuttle buses may be arranged between selected hotels and RMK Engineering College during conference days.</span>
+              <span>Shuttle buses may be arranged between selected hotels and <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-white font-semibold underline underline-offset-2 transition-colors" title="Visit RMK Engineering College Home Page">RMK Engineering College</a> during conference days.</span>
             </div>
 
             <a

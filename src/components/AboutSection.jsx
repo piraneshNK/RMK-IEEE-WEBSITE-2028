@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Cpu, Users, GitBranch, Lightbulb, ArrowRight, Shield, Award, CheckCircle2 } from 'lucide-react';
+import { Cpu, Users, GitBranch, Lightbulb, ArrowRight, Shield, Award, CheckCircle2, ExternalLink } from 'lucide-react';
 
 export default function AboutSection() {
   const [showFullAbout, setShowFullAbout] = useState(false);
@@ -61,9 +61,24 @@ export default function AboutSection() {
                 <span>Supported by the IEEE AI Coalition & IEEE Photonics Society</span>
               </div>
 
-              <div className="flex items-center space-x-2.5 bg-emerald-50/80 p-3 rounded-xl border border-emerald-100 text-xs font-bold text-slate-800">
-                <Award className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                <span>IEEE Xplore proceedings pathway — subject to approval</span>
+              <div className="flex flex-col space-y-1 bg-emerald-50/80 p-3 rounded-xl border border-emerald-100 text-xs text-slate-800">
+                <div className="flex items-center space-x-2.5 font-bold">
+                  <Award className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                  <span>IEEE Xplore Digital Library Proceedings Pathway</span>
+                </div>
+                <div className="pl-6 text-[11px] text-slate-600 flex items-center justify-between">
+                  <span>Subject to official IEEE approval & indexing</span>
+                  <a
+                    href="https://conferences.ieee.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-700 hover:text-emerald-900 font-semibold underline inline-flex items-center space-x-1"
+                    title="Verify IEEE Conference Sponsorship Status"
+                  >
+                    <span>Verify IEEE Portal</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -71,7 +86,7 @@ export default function AboutSection() {
             {showFullAbout && (
               <div className="space-y-3 pt-3 text-xs text-slate-600 border-t border-slate-100 animate-fadeIn">
                 <p>
-                  Hosted at R.M.K. Engineering College (Autonomous Institution, Kavaraipettai, Chennai), the flagship international symposium fosters global scientific collaboration across semiconductor devices, smart sensing, and quantum technologies.
+                  Hosted at <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:text-blue-800 font-bold underline underline-offset-2 transition-colors" title="Visit R.M.K. Engineering College Home Page">R.M.K. Engineering College</a> (Autonomous Institution, Kavaraipettai, Chennai), the flagship international symposium fosters global scientific collaboration across semiconductor devices, smart sensing, and quantum technologies.
                 </p>
                 <div className="flex items-center space-x-2 font-semibold text-[#2563eb]">
                   <CheckCircle2 className="w-4 h-4" />

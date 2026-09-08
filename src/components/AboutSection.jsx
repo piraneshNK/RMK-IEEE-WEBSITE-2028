@@ -58,7 +58,18 @@ export default function AboutSection() {
             <div className="pt-2 space-y-2">
               <div className="flex items-center space-x-2.5 bg-blue-50/80 p-3 rounded-xl border border-blue-100 text-xs font-bold text-slate-800">
                 <Shield className="w-4 h-4 text-[#2563eb] flex-shrink-0" />
-                <span>Supported by the IEEE AI Coalition & IEEE Photonics Society</span>
+                <span>
+                  Organised by{' '}
+                  <a 
+                    href="https://www.rmkec.ac.in/2023/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-[#2563eb] hover:underline font-bold"
+                    title="Visit R.M.K. Engineering College Official Website"
+                  >
+                    R.M.K. Engineering College (www.rmkec.ac.in)
+                  </a>
+                </span>
               </div>
 
               <div className="flex flex-col space-y-1 bg-emerald-50/80 p-3 rounded-xl border border-emerald-100 text-xs text-slate-800">

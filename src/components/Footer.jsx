@@ -27,9 +27,13 @@ export default function Footer() {
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
               IEEE International Conference on Photonics AI (Photonics AI 2028). An interdisciplinary forum bringing together global researchers, practitioners, and industry leaders.
             </p>
-            <div className="text-xs text-slate-500 font-medium space-y-1">
-              <p>Supported by the <span className="text-slate-300 font-semibold">IEEE AI Coalition</span> & <span className="text-blue-400 font-semibold">IEEE Photonics Society</span>.</p>
-              <p>Organized by <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-blue-400 font-semibold underline underline-offset-4 decoration-blue-400/40 hover:decoration-blue-400 transition-colors" title="Visit R.M.K. Engineering College Home Page">R.M.K. Engineering College (Autonomous)</a>.</p>
+            <div className="text-xs text-slate-400 font-medium space-y-1">
+              <p>
+                Organised by{' '}
+                <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="text-slate-200 hover:text-blue-400 font-bold underline underline-offset-4 decoration-blue-400/40 hover:decoration-blue-400 transition-colors" title="Visit R.M.K. Engineering College Official Website">
+                  R.M.K. Engineering College (Autonomous) — www.rmkec.ac.in
+                </a>
+              </p>
             </div>
           </div>
 
@@ -109,7 +113,12 @@ export default function Footer() {
             © 2028 IEEE International Conference on Photonics AI (PHOTONICS AI 2028). All Rights Reserved.
           </div>
           <div>
-            <span>Supported by IEEE AI Coalition & IEEE Photonics Society</span>
+            <span>
+              Organised by{' '}
+              <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 underline transition-colors" title="Visit R.M.K. Engineering College Official Website">
+                R.M.K. Engineering College (www.rmkec.ac.in)
+              </a>
+            </span>
           </div>
         </div>
 

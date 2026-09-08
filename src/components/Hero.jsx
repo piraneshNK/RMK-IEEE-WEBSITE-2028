@@ -46,7 +46,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
           
-          {/* Left Column: Text, Timing & Supported By Logos (5 Cols on Desktop) */}
+          {/* Left Column: Text & Timing (5 Cols on Desktop) */}
           <div className="lg:col-span-5 space-y-5 text-left z-10">
             
             {/* Category Tag */}
@@ -138,52 +138,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Supported By Logos Strip */}
-            <figure className="pt-4 space-y-2 border-t border-blue-200/60">
-              <figcaption className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 block">
-                Supported By & Technical Co-Sponsors
-              </figcaption>
-              <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-1">
-                {/* Logo 1: IEEE */}
-                <div className="bg-white p-2 sm:p-2.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-center hover:border-blue-300 transition-colors">
-                  <img
-                    src="/ieee-logo.jpg"
-                    alt="IEEE Official Organization Logo"
-                    loading="lazy"
-                    decoding="async"
-                    width="120"
-                    height="32"
-                    className="h-7 sm:h-8 w-auto object-contain mix-blend-multiply"
-                  />
-                </div>
 
-                {/* Logo 2: IEEE Photonics Society */}
-                <div className="bg-white p-2 sm:p-2.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-center hover:border-blue-300 transition-colors">
-                  <img
-                    src="/ieee-photonics-logo.png"
-                    alt="IEEE Photonics Society Technical Co-Sponsor Emblem"
-                    loading="lazy"
-                    decoding="async"
-                    width="160"
-                    height="32"
-                    className="h-7 sm:h-8 w-auto object-contain mix-blend-multiply"
-                  />
-                </div>
-
-                {/* Logo 3: AI at IEEE */}
-                <div className="bg-white p-2 sm:p-2.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-center hover:border-blue-300 transition-colors">
-                  <img
-                    src="/ai-at-ieee-logo.png"
-                    alt="AI at IEEE Technical Coalition Emblem"
-                    loading="lazy"
-                    decoding="async"
-                    width="140"
-                    height="32"
-                    className="h-7 sm:h-8 w-auto object-contain mix-blend-multiply"
-                  />
-                </div>
-              </div>
-            </figure>
 
           </div>
 

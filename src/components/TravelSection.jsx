@@ -13,19 +13,19 @@ export default function TravelSection() {
     },
     {
       name: "Hyatt Regency Chennai",
-      link: "https://www.booking.com/searchresults.html?ss=Hyatt%20Regency%20Chennai%20Chennai",
+      link: "https://www.hyatt.com/search/hotels/en-US/Chennai%2C%20India?src=sem_aspac_corp_none_google_iprospectin_na_md_en_exact-phrase-india-Chennai_h1_22430235765_Corporate_Search_Google_INDIA_None_IN_BR_AO_IN_ALL_Rooms_Chennai-Feeder-India_Exact_174801607661_the+hyatt+chennai&gclsrc=aw.ds&gad_source=1&gad_campaignid=22430235765&gbraid=0AAAAA-jHPGWqj3ugXjevxFWntX8HRwTil&gclid=Cj0KCQjwh4TVBhCWARIsAG0czmpXlAZnVLcG4pNaf1aEtNEgFdeddWgKggRppPGTyGagJA_vrdGU4HQaAujVEALw_wcB",
       distance: "42 km",
       tariff: "₹12,000 – ₹18,000"
     },
     {
       name: "The Residency Towers Chennai",
-      link: "https://www.booking.com/searchresults.html?ss=The%20Residency%20Towers%20Chennai%20Chennai",
+      link: "https://www.theresidency.com/towers-chennai/",
       distance: "42 km",
       tariff: "₹10,000 – ₹15,000"
     },
     {
       name: "Courtyard by Marriott Chennai",
-      link: "https://www.booking.com/searchresults.html?ss=Courtyard%20by%20Marriott%20Chennai%20Chennai",
+      link: "https://www.marriott.com/en-us/hotels/maacy-courtyard-chennai/overview/?nst=paid&cid=PAI_GLB0004YFY_GLE000BHOR_GLF000OCGE&nst=paid&gclsrc=aw.ds&gad_source=1&gad_campaignid=22178146794&gbraid=0AAAAADilnicHqEnnVd_E3KHMAL96WJ8s0&gclid=Cj0KCQjwh4TVBhCWARIsAG0czmq-5t4wch8ubvZZUsL2UcGUMkX1-AtJlhpH4JDO_1_Zf3mPMCCyMQMaAto4EALw_wcB",
       distance: "40 km",
       tariff: "₹10,000 – ₹16,000"
     }
@@ -34,7 +34,7 @@ export default function TravelSection() {
   const businessHotels = [
     {
       name: "Green Park Chennai",
-      link: "https://www.booking.com/searchresults.html?ss=Green%20Park%20Chennai%20Chennai",
+      link: "https://hotelgreenpark.com/hotel-greenpark-chennai/",
       distance: "35 km",
       tariff: "₹6,500 – ₹10,000"
     },
@@ -46,13 +46,13 @@ export default function TravelSection() {
     },
     {
       name: "JP Hotel Chennai",
-      link: "https://www.booking.com/searchresults.html?ss=JP%20Hotel%20Chennai%20Chennai",
+      link: "https://www.hoteljpchennai.com/",
       distance: "34 km",
       tariff: "₹5,500 – ₹8,500"
     },
     {
       name: "Ambica Empire Chennai",
-      link: "https://www.booking.com/searchresults.html?ss=Ambica%20Empire%20Chennai%20Chennai",
+      link: "https://www.ambicaempire.com/",
       distance: "38 km",
       tariff: "₹5,000 – ₹8,000"
     }
@@ -67,7 +67,7 @@ export default function TravelSection() {
     },
     {
       name: "Naksha Tree Hotels, Koyambedu",
-      link: "https://www.booking.com/searchresults.html?ss=Naksha%20Tree%20Hotels%2C%20Koyambedu%20Chennai",
+      link: "https://www.nakshatreehotels.com/",
       distance: "32 km",
       tariff: "₹2,000 – ₹3,800"
     },
@@ -105,7 +105,7 @@ export default function TravelSection() {
             Hotel Accommodation Options Near <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline" title="Visit R.M.K. Engineering College Official Website">R.M.K. Engineering College</a>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            Click the live booking buttons to check current rates and availability on Booking.com.
+            Click the live booking buttons to check current rates and availability on official hotel websites.
           </p>
         </div>
 
@@ -118,7 +118,7 @@ export default function TravelSection() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <h3 className="text-xl font-bold text-slate-900">Hotel Accommodation Options</h3>
-                <p className="text-xs text-slate-500">Live Booking.com search buttons for each property</p>
+                <p className="text-xs text-slate-500">Direct hotel website links for each property</p>
               </div>
 
               {/* Selector Tabs */}

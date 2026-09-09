@@ -89,7 +89,7 @@ export default function LiveViewersFlag() {
 
       <div className="flex items-center justify-between text-[10px] text-slate-400 pt-1">
         <span>Real-time Geolocation Flag Tracker for Representing Countries</span>
-        <span>IEEE Photonics AI 2028</span>
+        <span>Photonics AI 2028</span>
       </div>
 
     </section>

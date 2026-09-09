@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ShieldCheck, User, Building, Heart, Globe, Search } from 'lucide-react';
 
 export default function CommitteeSection() {
-  const [activeTab, setActiveTab] = useState('organizing');
+  const [activeTab, setActiveTab] = useState('patrons');
   const [searchQuery, setSearchQuery] = useState('');
 
   const patronsList = [
@@ -16,20 +16,20 @@ export default function CommitteeSection() {
   ];
 
   const organizingChairs = [
-    { name: "Dr. K.A. Mohamed Junaid", role: "General Chair", designation: "Principal", affiliation: "R.M.K. Engineering College" },
-    { name: "Dr. T.D. Subash", role: "Organizing Chair", designation: "IEEE Photonics Society, USA", affiliation: "Conference Organizing Chair" },
-    { name: "Dr. T. Suresh", role: "Convenor", designation: "HoD / ECE", affiliation: "R.M.K. Engineering College" },
-    { name: "Dr. Subha T. D.", role: "Publication Chair", designation: "Faculty Lead", affiliation: "Publication & IEEE Xplore" },
-    { name: "Dr. Vidya Lakshmi V", role: "Travel Grant Chair", designation: "Faculty Lead", affiliation: "Travel Grant Committee" },
-    { name: "Dr. P.G. Gopinath", role: "Keynote Chair", designation: "Faculty Lead", affiliation: "Keynote & Session Committee" },
-    { name: "Dr. Darwin Nesakumar", role: "Publicity Chair", designation: "Faculty Lead", affiliation: "Dissemination & Publicity" },
-    { name: "Dr. V. Balaji", role: "Finance Chair", designation: "Faculty Lead", affiliation: "Finance & Accounts" },
-    { name: "Mr. Babuji R", role: "Local Arrangements Chair", designation: "Faculty Lead", affiliation: "Campus Logistics & Arrangements" },
-    { name: "Dr. Deepa D", role: "Award Chair", designation: "Faculty Lead", affiliation: "Awards & Recognition" },
-    { name: "Ms. G. BHAVANI", role: "Registration Chair", designation: "Faculty Lead", affiliation: "Registration Desk" },
-    { name: "Ms. Priyadharshini S", role: "Web & Social Media Chair", designation: "Faculty Lead", affiliation: "Web & Media Portal" },
-    { name: "Mr. Karthikeyan C", role: "Sponsorship Chair", designation: "Faculty Lead", affiliation: "Sponsorship & Partnership" },
-    { name: "Ms. Samudha Prathima", role: "Workshops Chair", designation: "Faculty Lead", affiliation: "Workshops & Tutorials" }
+    { name: "Dr. K.A. Mohamed Junaid", role: "Conference Chair", designation: "Principal", affiliation: "R.M.K. Engineering College" },
+    { name: "Dr. T. Suresh", role: "Conference Chair", designation: "HoD / ECE", affiliation: "R.M.K. Engineering College" },
+    { name: "Dr. T.D. Subash", role: "Conference Chair", designation: "Photonics Society, USA", affiliation: "Conference Organizing Chair" },
+    { name: "Dr. Subha T. D.", role: "Conference Publication Chair", designation: "Faculty Lead", affiliation: "Publication Committee" },
+    { name: "Dr. Vidya Lakshmi V", role: "Conference Travel Grant Chair", designation: "Faculty Lead", affiliation: "Travel Grant Committee" },
+    { name: "Dr. P.G. Gopinath", role: "Conference Keynote Chair", designation: "Faculty Lead", affiliation: "Keynote & Session Committee" },
+    { name: "Dr. Darwin Nesakumar", role: "Conference Publicity Chair", designation: "Faculty Lead", affiliation: "Dissemination & Publicity" },
+    { name: "Dr. V. Balaji", role: "Conference Finance Chair", designation: "Faculty Lead", affiliation: "Finance & Accounts" },
+    { name: "Mr. Babuji R", role: "Conference Local Arrangements Chair", designation: "Faculty Lead", affiliation: "Campus Logistics & Arrangements" },
+    { name: "Dr. Deepa D", role: "Conference Award Chair", designation: "Faculty Lead", affiliation: "Awards & Recognition" },
+    { name: "Ms. G. BHAVANI", role: "Conference Registration Chair", designation: "Faculty Lead", affiliation: "Registration Desk" },
+    { name: "Ms. Priyadharshini S", role: "Conference Web & Social Media Chair", designation: "Faculty Lead", affiliation: "Web & Media Portal" },
+    { name: "Mr. Karthikeyan C", role: "Conference Sponsorship Chair", designation: "Faculty Lead", affiliation: "Sponsorship & Partnership" },
+    { name: "Ms. Samudha Prathima", role: "Conference Workshops Chair", designation: "Faculty Lead", affiliation: "Workshops & Tutorials" }
   ];
 
   const advisoryMembers = [
@@ -125,24 +125,13 @@ export default function CommitteeSection() {
             Conference Leadership & Committees
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            Patrons, General Chairs, Advisory Committee, Technical Program Committee, and Women in Photonics TPC.
+            Patrons, Conference Chairs, Advisory Committee, Technical Program Committee, and Women in Photonics TPC.
           </p>
         </div>
 
         {/* Tab Buttons & Search input */}
         <div className="space-y-6 mb-10">
           <div className="flex flex-wrap justify-center gap-2">
-            <button
-              onClick={() => setActiveTab('organizing')}
-              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
-                activeTab === 'organizing'
-                  ? 'bg-[#2563eb] text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
-            >
-              Organizing Chairs ({organizingChairs.length})
-            </button>
-
             <button
               onClick={() => setActiveTab('patrons')}
               className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
@@ -152,6 +141,17 @@ export default function CommitteeSection() {
               }`}
             >
               Patrons ({patronsList.length})
+            </button>
+
+            <button
+              onClick={() => setActiveTab('organizing')}
+              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
+                activeTab === 'organizing'
+                  ? 'bg-[#2563eb] text-white shadow-sm'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              Organizing Chairs ({organizingChairs.length})
             </button>
 
             <button
@@ -201,31 +201,7 @@ export default function CommitteeSection() {
           </div>
         </div>
 
-        {/* Tab 1: Organizing Chairs */}
-        {activeTab === 'organizing' && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 animate-fadeIn">
-            {filterBySearch(organizingChairs).map((item, idx) => (
-              <article key={idx} className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2">
-                <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#2563eb] bg-blue-100/60 px-2.5 py-0.5 rounded-full inline-block">
-                  {item.role}
-                </span>
-                <h3 className="font-bold text-slate-900 text-base leading-snug">{item.name}</h3>
-                <p className="text-xs font-medium text-slate-700">{item.designation}</p>
-                <p className="text-[11px] text-slate-500">
-                  {item.affiliation.includes("R.M.K") ? (
-                    <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="hover:text-[#2563eb] hover:underline transition-colors" title="Visit R.M.K. Home Page">
-                      {item.affiliation}
-                    </a>
-                  ) : (
-                    item.affiliation
-                  )}
-                </p>
-              </article>
-            ))}
-          </div>
-        )}
-
-        {/* Tab 2: Patrons */}
+        {/* Tab 1: Patrons */}
         {activeTab === 'patrons' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 animate-fadeIn">
             {filterBySearch(patronsList).map((item, idx) => (
@@ -237,7 +213,31 @@ export default function CommitteeSection() {
                 <p className="text-xs font-medium text-slate-700">{item.designation}</p>
                 <p className="text-[11px] text-slate-500">
                   {item.affiliation.includes("R.M.K") ? (
-                    <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="hover:text-[#2563eb] hover:underline transition-colors" title="Visit R.M.K. Home Page">
+                    <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="hover:text-[#2563eb] hover:underline transition-colors" title="Visit R.M.K. Engineering College Home Page">
+                      {item.affiliation}
+                    </a>
+                  ) : (
+                    item.affiliation
+                  )}
+                </p>
+              </article>
+            ))}
+          </div>
+        )}
+
+        {/* Tab 2: Organizing Chairs */}
+        {activeTab === 'organizing' && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 animate-fadeIn">
+            {filterBySearch(organizingChairs).map((item, idx) => (
+              <article key={idx} className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#2563eb] bg-blue-100/60 px-2.5 py-0.5 rounded-full inline-block">
+                  {item.role}
+                </span>
+                <h3 className="font-bold text-slate-900 text-base leading-snug">{item.name}</h3>
+                <p className="text-xs font-medium text-slate-700">{item.designation}</p>
+                <p className="text-[11px] text-slate-500">
+                  {item.affiliation.includes("R.M.K") ? (
+                    <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="hover:text-[#2563eb] hover:underline transition-colors" title="Visit R.M.K. Engineering College Home Page">
                       {item.affiliation}
                     </a>
                   ) : (

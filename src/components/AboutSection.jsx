@@ -75,18 +75,18 @@ export default function AboutSection() {
               <div className="flex flex-col space-y-1 bg-emerald-50/80 p-3 rounded-xl border border-emerald-100 text-xs text-slate-800">
                 <div className="flex items-center space-x-2.5 font-bold">
                   <Award className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                  <span>IEEE Xplore Digital Library Proceedings Pathway</span>
+                  <span>Digital Library Proceedings Pathway</span>
                 </div>
                 <div className="pl-6 text-[11px] text-slate-600 flex items-center justify-between">
-                  <span>Subject to official IEEE approval & indexing</span>
+                  <span>Subject to official publication approval & indexing</span>
                   <a
                     href="https://conferences.ieee.org/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-emerald-700 hover:text-emerald-900 font-semibold underline inline-flex items-center space-x-1"
-                    title="Verify IEEE Conference Sponsorship Status"
+                    title="Verify Conference Sponsorship Status"
                   >
-                    <span>Verify IEEE Portal</span>
+                    <span>Verify Portal</span>
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>

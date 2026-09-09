@@ -19,7 +19,7 @@ export default function Navbar() {
     { name: 'Travel Grant', href: '#travel-grant' },
     { name: 'Stay & Travel', href: '#travel' },
     { name: 'Visa Info', href: '#visa' },
-    { name: 'About RMKEC', href: 'https://www.rmkec.ac.in/2023/', external: true },
+    { name: 'About R.M.K. Engineering College', href: 'https://www.rmkec.ac.in/2023/', external: true },
   ];
 
   return (
@@ -31,7 +31,7 @@ export default function Navbar() {
           <a href="#hero" aria-label="Photonics AI 2028 Home" className="flex items-center space-x-3 group">
             <img 
               src="/logo.png" 
-              alt="IEEE Photonics AI 2028 Official Emblem Logo" 
+              alt="Photonics AI 2028 Official Emblem Logo" 
               loading="lazy"
               decoding="async"
               className="h-10 w-auto object-contain"

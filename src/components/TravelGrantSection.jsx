@@ -5,7 +5,7 @@ export default function TravelGrantSection() {
   const eligibilityList = [
     "Students and Research Scholars",
     "Early Career Researchers",
-    "IEEE Student Members and Young Professionals",
+    "Student Members and Young Professionals",
     "Participants from developing countries",
     "Authors of accepted papers",
     "Women researchers and underrepresented groups in STEM"
@@ -60,7 +60,7 @@ export default function TravelGrantSection() {
             <div className="pt-4 border-t border-slate-100 space-y-2">
               <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Evaluation & Selection Criteria</h4>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Evaluated based on paper quality, research innovation, financial need statement, IEEE membership status, and available sponsorship funding.
+                Evaluated based on paper quality, research innovation, financial need statement, membership status, and available sponsorship funding.
               </p>
             </div>
 

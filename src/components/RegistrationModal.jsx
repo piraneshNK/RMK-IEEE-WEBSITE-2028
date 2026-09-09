@@ -33,7 +33,7 @@ export default function RegistrationModal({ isOpen, onClose }) {
           <div className="flex items-center space-x-3">
             <img 
               src="/logo.png" 
-              alt="IEEE Photonics AI 2028 Official Conference Registration Logo" 
+              alt="Photonics AI 2028 Official Conference Registration Logo" 
               loading="lazy"
               decoding="async"
               className="h-8 w-auto"
@@ -44,7 +44,7 @@ export default function RegistrationModal({ isOpen, onClose }) {
             />
             <div>
               <h3 className="font-extrabold text-lg leading-tight">Conference Registration</h3>
-              <p className="text-xs text-blue-300">IEEE Photonics AI 2028 · April 27-28, 2028</p>
+              <p className="text-xs text-blue-300">Photonics AI 2028 · April 27-28, 2028</p>
             </div>
           </div>
 
@@ -94,7 +94,7 @@ export default function RegistrationModal({ isOpen, onClose }) {
                         : 'border-slate-200 text-slate-700 hover:bg-slate-50'
                     }`}
                   >
-                    <div className="text-xs font-semibold">IEEE Member</div>
+                    <div className="text-xs font-semibold">Society Member</div>
                     <div className="text-sm font-extrabold text-blue-600">$350 / ₹12,000</div>
                   </button>
 
@@ -107,7 +107,7 @@ export default function RegistrationModal({ isOpen, onClose }) {
                         : 'border-slate-200 text-slate-700 hover:bg-slate-50'
                     }`}
                   >
-                    <div className="text-xs font-semibold">Non-IEEE Author</div>
+                    <div className="text-xs font-semibold">Non-Member Author</div>
                     <div className="text-sm font-extrabold text-blue-600">$450 / ₹15,000</div>
                   </button>
 
@@ -177,7 +177,7 @@ export default function RegistrationModal({ isOpen, onClose }) {
                     <input
                       type="text"
                       required
-                      placeholder="RMKEC / MIT / Industry"
+                      placeholder="R.M.K. Engineering College / MIT / Industry"
                       value={formData.institution}
                       onChange={(e) => setFormData({ ...formData, institution: e.target.value })}
                       className="w-full px-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-500 text-sm"

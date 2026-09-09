@@ -8,7 +8,7 @@ export default function DatesSection() {
       date: "30 MAY 2027",
       status: "Important",
       active: true,
-      desc: "Deadline for submitting full-length 4-6 page IEEE format research papers."
+      desc: "Deadline for submitting full-length 4-6 page research papers."
     },
     {
       title: "Acceptance Notification",
@@ -29,7 +29,7 @@ export default function DatesSection() {
       date: "27–28 APR 2028",
       status: "Main Event",
       active: false,
-      desc: "Flagship international conference at RMK Engineering College Campus, Chennai, India."
+      desc: "Flagship international conference at R.M.K. Engineering College Campus, Chennai, India."
     }
   ];
 
@@ -77,7 +77,7 @@ export default function DatesSection() {
                       </h3>
 
                       <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                        {item.desc.includes("RMK Engineering College") ? (
+                        {item.desc.includes("R.M.K. Engineering College") ? (
                           <>
                             Flagship international conference at{' '}
                             <a 
@@ -85,9 +85,9 @@ export default function DatesSection() {
                               target="_blank" 
                               rel="noopener noreferrer" 
                               className="text-[#2563eb] hover:underline font-semibold"
-                              title="Visit RMK Engineering College Home Page"
+                              title="Visit R.M.K. Engineering College Home Page"
                             >
-                              RMK Engineering College
+                              R.M.K. Engineering College
                             </a>{' '}
                             Campus, Chennai, India.
                           </>

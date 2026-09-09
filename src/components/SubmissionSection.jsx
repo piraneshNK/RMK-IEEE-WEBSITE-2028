@@ -16,7 +16,7 @@ export default function SubmissionSection() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Paper Guidelines & IEEE Standards
+              Paper Guidelines & Publication Standards
             </h2>
 
             <p className="text-slate-600 text-base leading-relaxed">
@@ -29,7 +29,7 @@ export default function SubmissionSection() {
                 <CheckCircle className="w-5 h-5 text-[#2563eb] mt-0.5 flex-shrink-0" />
                 <div>
                   <h4 className="text-sm font-bold text-slate-900">Format Standard</h4>
-                  <p className="text-xs text-slate-600">Standard IEEE two-column manuscript format (4 to 6 pages including figures and references in English).</p>
+                  <p className="text-xs text-slate-600">Standard two-column manuscript format (4 to 6 pages including figures and references in English).</p>
                 </div>
               </div>
 
@@ -37,15 +37,15 @@ export default function SubmissionSection() {
                 <CheckCircle className="w-5 h-5 text-[#2563eb] mt-0.5 flex-shrink-0" />
                 <div>
                   <h4 className="text-sm font-bold text-slate-900">Peer Review & Plagiarism Policy</h4>
-                  <p className="text-xs text-slate-600">Submissions undergo rigorous peer-review process and must adhere strictly to IEEE plagiarism limits.</p>
+                  <p className="text-xs text-slate-600">Submissions undergo rigorous peer-review process and must adhere strictly to plagiarism limits.</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-3 bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-sm">
                 <CheckCircle className="w-5 h-5 text-[#2563eb] mt-0.5 flex-shrink-0" />
                 <div>
-                  <h4 className="text-sm font-bold text-slate-900">IEEE PDF eXpress Compliance</h4>
-                  <p className="text-xs text-slate-600">Camera-ready papers must comply with IEEE PDF formatting and eCopyright requirements.</p>
+                  <h4 className="text-sm font-bold text-slate-900">PDF eXpress Compliance</h4>
+                  <p className="text-xs text-slate-600">Camera-ready papers must comply with PDF formatting and eCopyright requirements.</p>
                 </div>
               </div>
             </div>
@@ -59,7 +59,7 @@ export default function SubmissionSection() {
                 className="bg-white hover:bg-slate-100 text-slate-700 font-bold px-6 py-3 rounded-full border border-slate-300 shadow-sm transition-all flex items-center space-x-2 text-sm"
               >
                 <Download className="w-4 h-4 text-[#2563eb]" />
-                <span>IEEE MS Word / LaTeX Template</span>
+                <span>MS Word / LaTeX Template</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
               </a>
             </div>
@@ -76,17 +76,17 @@ export default function SubmissionSection() {
                     <Shield className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-extrabold text-slate-900 text-lg">IEEE Xplore Publication</h3>
-                    <p className="text-xs text-slate-500 font-medium">Subject to IEEE Approval & Quality Review</p>
+                    <h3 className="font-extrabold text-slate-900 text-lg">Digital Library Publication</h3>
+                    <p className="text-xs text-slate-500 font-medium">Subject to Approval & Quality Review</p>
                   </div>
                 </div>
                 <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
-                  IEEE Official
+                  Official Proceedings
                 </span>
               </div>
 
               <p className="text-slate-600 text-sm leading-relaxed">
-                All accepted and presented papers will be submitted for inclusion in the IEEE Xplore Digital Library, subject to IEEE approval, quality review, and compliance with publication requirements.
+                All accepted and presented papers will be submitted for inclusion in the Digital Library, subject to approval, quality review, and compliance with publication requirements.
               </p>
 
               <div className="bg-blue-50/70 p-4 rounded-2xl border border-blue-100 space-y-2">

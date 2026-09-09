@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Calendar, MapPin } from 'lucide-react';
 
 export default function Hero() {
-  // Target Conference Date: May 20, 2027 09:00 IST
-  const targetDate = Date.parse('2027-05-20T09:00:00+05:30');
+  // Target Conference Date: April 27, 2028 09:00 IST
+  const targetDate = Date.parse('2028-04-27T09:00:00+05:30');
 
   const [timeLeft, setTimeLeft] = useState(() => {
     const now = Date.now();
@@ -51,9 +51,9 @@ export default function Hero() {
             
             {/* Category Tag */}
             <div className="inline-flex items-center space-x-2 text-xs sm:text-sm font-semibold tracking-wider text-[#2563eb] uppercase">
-              <span>20 MAY 2027</span>
+              <span>27 APRIL 2028</span>
               <span className="text-blue-400 font-bold">·</span>
-              <span>IEEE INTERNATIONAL CONFERENCE</span>
+              <span>INTERNATIONAL CONFERENCE</span>
             </div>
 
             {/* Main Headline */}
@@ -72,7 +72,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-slate-700 text-sm sm:text-base font-semibold pt-1">
               <div className="inline-flex items-center space-x-2">
                 <Calendar className="w-4 h-4 text-[#2563eb]" />
-                <span>20 May 2027</span>
+                <span>27 April 2028</span>
               </div>
               <span className="text-slate-300 font-light hidden sm:inline">|</span>
               <div className="inline-flex items-center space-x-2">
@@ -83,9 +83,9 @@ export default function Hero() {
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="text-slate-800 hover:text-[#2563eb] font-bold underline underline-offset-4 decoration-blue-400/50 hover:decoration-blue-600 transition-colors"
-                    title="Visit RMK Engineering College Home Page"
+                    title="Visit R.M.K. Engineering College Home Page"
                   >
-                    RMK Engineering College
+                    R.M.K. Engineering College
                   </a>, Chennai, India
                 </span>
               </div>
@@ -147,7 +147,7 @@ export default function Hero() {
             <figure className="w-full lg:w-[130%] lg:-mr-20 xl:-mr-28 transform lg:scale-115 xl:scale-125 origin-right transition-transform duration-500">
               <img
                 src="/main-page.png"
-                alt="IEEE Photonics AI 2028 Conference Keynote Banner Graphic"
+                alt="Photonics AI 2028 Conference Keynote Banner Graphic"
                 loading="eager"
                 decoding="async"
                 width="800"

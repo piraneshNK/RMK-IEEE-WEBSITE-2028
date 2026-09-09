@@ -15,7 +15,7 @@ export default function TracksSection() {
         "Low-energy Electro-optic Modulators",
         "Hybrid CMOS-Photonic Co-packaged Systems"
       ],
-      chairs: "Dr. A. R. Ramanathan & Dr. Sarah Jenkins"
+      chairs: "To be announced"
     },
     {
       title: "Photonic Neural Networks",
@@ -27,7 +27,7 @@ export default function TracksSection() {
         "On-chip Training & Inference Algorithms",
         "Diffractive Optical Neural Networks (DONN)"
       ],
-      chairs: "Prof. Michael Zhang & Dr. K. Priya"
+      chairs: "To be announced"
     },
     {
       title: "Quantum Photonics & Sensing",
@@ -39,7 +39,7 @@ export default function TracksSection() {
         "Photonic Quantum Key Distribution (QKD)",
         "AI-enhanced Precision Quantum Sensing"
       ],
-      chairs: "Dr. Elena Rostova & Prof. V. Sundaram"
+      chairs: "To be announced"
     },
     {
       title: "Neuromorphic Photonics",
@@ -51,7 +51,7 @@ export default function TracksSection() {
         "Phase-Change Material (PCM) Optical Memory",
         "Ultrafast Event-based Optical Information Processing"
       ],
-      chairs: "Prof. David Miller & Dr. N. Anand"
+      chairs: "To be announced"
     },
     {
       title: "Integrated Nanophotonics",
@@ -63,7 +63,7 @@ export default function TracksSection() {
         "Heterogeneous Integration of III-V on Silicon",
         "Sub-wavelength Photonic Crystal Logic Gates"
       ],
-      chairs: "Dr. Claire Dubois & Dr. S. Balaji"
+      chairs: "To be announced"
     },
     {
       title: "AI for Optical Communications",
@@ -75,7 +75,7 @@ export default function TracksSection() {
         "AI-driven Spatial Division Multiplexing (SDM)",
         "Optical Performance Monitoring using Neural Nets"
       ],
-      chairs: "Prof. Kenji Takahashi & Dr. R. Lakshmi"
+      chairs: "To be announced"
     }
   ];
 
@@ -134,7 +134,7 @@ export default function TracksSection() {
               <span className="text-xs font-bold uppercase tracking-wider text-[#2563eb] bg-blue-50 px-3 py-1 rounded-full">
                 TRACK 0{activeTrack + 1}
               </span>
-              <span className="text-xs text-slate-400 font-medium">IEEE Photonics AI 2028</span>
+              <span className="text-xs text-slate-400 font-medium">Photonics AI 2028</span>
             </div>
 
             <h3 className="text-2xl font-extrabold text-slate-900">

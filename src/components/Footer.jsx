@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3">
               <img 
                 src="/logo.png" 
-                alt="IEEE Photonics AI 2028 Official Footer Emblem Logo" 
+                alt="Photonics AI 2028 Official Footer Emblem Logo" 
                 loading="lazy"
                 decoding="async"
                 className="h-12 w-auto object-contain"
@@ -25,7 +25,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              IEEE International Conference on Photonics AI (Photonics AI 2028). An interdisciplinary forum bringing together global researchers, practitioners, and industry leaders.
+              International Conference on Photonics AI (Photonics AI 2028). An interdisciplinary forum bringing together global researchers, practitioners, and industry leaders.
             </p>
             <div className="text-xs text-slate-400 font-medium space-y-1">
               <p>
@@ -65,7 +65,7 @@ export default function Footer() {
                   rel="noopener noreferrer" 
                   className="hover:text-blue-400 transition-colors inline-flex items-center space-x-1 text-blue-300 font-semibold"
                 >
-                  <span>About RMKEC Campus</span>
+                  <span>About R.M.K. Engineering College Campus</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </li>
@@ -80,7 +80,7 @@ export default function Footer() {
               <div>
                 <span className="text-white font-bold block">Dr. Subash T. D.</span>
                 <span className="text-blue-400 text-[11px] font-semibold block">Conference Organizing Chair</span>
-                <span className="text-slate-400 text-[11px]">IEEE Photonics Society, USA</span>
+                <span className="text-slate-400 text-[11px]">Photonics Society, USA</span>
               </div>
 
               <div className="flex items-start space-x-2 pt-1">
@@ -90,12 +90,15 @@ export default function Footer() {
 
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                <span className="text-slate-200 font-semibold">+91 9486881397, +91 9447691397</span>
+                <span className="text-slate-200 font-semibold">+91 9486881397</span>
               </div>
 
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                <a href="mailto:tdsubash2007@gmail.com" className="hover:text-white text-blue-300 font-semibold">tdsubash2007@gmail.com</a>
+              <div className="flex items-start space-x-2">
+                <Mail className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
+                <div className="flex flex-col space-y-0.5">
+                  <a href="mailto:subhash.ec@rmkec.ac.in" className="hover:text-white text-blue-300 font-semibold">subhash.ec@rmkec.ac.in</a>
+                  <a href="mailto:tdsubash2007@gmail.com" className="hover:text-white text-blue-300 font-semibold">tdsubash2007@gmail.com</a>
+                </div>
               </div>
 
               <div className="flex items-center space-x-2">
@@ -110,7 +113,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <div>
-            © 2028 IEEE International Conference on Photonics AI (PHOTONICS AI 2028). All Rights Reserved.
+            © 2028 International Conference on Photonics AI (PHOTONICS AI 2028). All Rights Reserved.
           </div>
           <div>
             <span>

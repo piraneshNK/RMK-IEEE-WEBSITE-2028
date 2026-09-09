@@ -29,7 +29,7 @@ export default function SubmissionModal({ isOpen, onClose }) {
             <Upload className="w-6 h-6 text-blue-200" />
             <div>
               <h3 className="font-extrabold text-lg leading-tight">Submit Research Paper</h3>
-              <p className="text-xs text-blue-100">IEEE Photonics AI 2028</p>
+              <p className="text-xs text-blue-100">Photonics AI 2028</p>
             </div>
           </div>
 
@@ -108,7 +108,7 @@ export default function SubmissionModal({ isOpen, onClose }) {
                 <div className="border-2 border-dashed border-blue-200 rounded-2xl p-6 text-center hover:bg-blue-50/50 transition-colors cursor-pointer">
                   <FileText className="w-8 h-8 text-blue-500 mx-auto mb-2" />
                   <span className="text-xs font-bold text-slate-700 block">Click to select PDF or drag & drop</span>
-                  <span className="text-[11px] text-slate-400">Must conform to IEEE 2-column format</span>
+                  <span className="text-[11px] text-slate-400">Must conform to standard 2-column format</span>
                 </div>
               </div>
 

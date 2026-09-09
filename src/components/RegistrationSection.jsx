@@ -3,11 +3,11 @@ import { UserCheck, CheckCircle2, ShieldAlert } from 'lucide-react';
 
 export default function RegistrationSection() {
   const categories = [
-    { title: "IEEE Members", desc: "Discounted rates for active IEEE Photonics Society members." },
-    { title: "Non-IEEE Participants", desc: "Full access delegate tier for academic & non-member authors." },
+    { title: "Society Members", desc: "Discounted rates for active Photonics Society members." },
+    { title: "Non-Member Participants", desc: "Full access delegate tier for academic & non-member authors." },
     { title: "Students & Scholars", desc: "Subsidized tier for undergraduate, postgraduate & PhD scholars." },
     { title: "Authors (Indian)", desc: "National presenter registration for accepted papers." },
-    { title: "Authors (International)", desc: "Global author registration with IEEE Xplore proceedings index." },
+    { title: "Authors (International)", desc: "Global author registration with proceedings index." },
     { title: "Industry Participants", desc: "Corporate delegates & technology partners." },
     { title: "Attendees / Listeners", desc: "Non-presenting delegates & session participants." }
   ];

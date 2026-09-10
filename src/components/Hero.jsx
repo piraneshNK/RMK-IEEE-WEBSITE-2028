@@ -79,6 +79,7 @@ export default function Hero() {
               <div className="inline-flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-[#2563eb]" />
                 <span>
+                  <span className="block text-xs text-slate-500 font-medium">Department of Electronics and Communication Engineering</span>
                   <a 
                     href="https://www.rmkec.ac.in/2023/" 
                     target="_blank" 

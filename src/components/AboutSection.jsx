@@ -51,7 +51,7 @@ export default function AboutSection() {
 
             {/* User Paragraph */}
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Photonics AI 2028 is an interdisciplinary forum bringing together researchers, practitioners, and industry leaders in Artificial Intelligence, Photonics, Optical computing, Optical communication, Photonic sensing, Silicon photonics, Quantum photonics, and Intelligent systems.
+              Photonics AI 2028 – International Conference on Artificial Intelligence in Photonic Systems is an interdisciplinary global forum that brings together researchers, academicians, and industry experts to explore the convergence of artificial intelligence and photonic technologies. The conference focuses on advancing intelligent photonic systems for next-generation computing, communications, sensing, and imaging, including areas such as optical neural networks, silicon photonics, AI-driven optical communications, and quantum photonics. It aims to foster innovation in energy-efficient, high-speed, and intelligent light-based technologies that will shape future AI-enabled infrastructures and smart systems worldwide.
             </p>
 
             {/* Badges / IEEE Support */}
@@ -67,30 +67,11 @@ export default function AboutSection() {
                     className="text-[#2563eb] hover:underline font-bold"
                     title="Visit R.M.K. Engineering College Official Website"
                   >
-                    R.M.K. Engineering College (www.rmkec.ac.in)
+                    R.M.K. Engineering College
                   </a>
                 </span>
               </div>
 
-              <div className="flex flex-col space-y-1 bg-emerald-50/80 p-3 rounded-xl border border-emerald-100 text-xs text-slate-800">
-                <div className="flex items-center space-x-2.5 font-bold">
-                  <Award className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                  <span>Digital Library Proceedings Pathway</span>
-                </div>
-                <div className="pl-6 text-[11px] text-slate-600 flex items-center justify-between">
-                  <span>Subject to official publication approval & indexing</span>
-                  <a
-                    href="https://conferences.ieee.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-emerald-700 hover:text-emerald-900 font-semibold underline inline-flex items-center space-x-1"
-                    title="Verify Conference Sponsorship Status"
-                  >
-                    <span>Verify Portal</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                </div>
-              </div>
             </div>
 
             {/* Expander detail */}

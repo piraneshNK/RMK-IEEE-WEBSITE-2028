@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShieldCheck, User, Building, Heart, Globe, Search } from 'lucide-react';
+import { ShieldCheck, User, Building, Heart, Globe, Search, ExternalLink } from 'lucide-react';
 
 export default function CommitteeSection() {
   const [activeTab, setActiveTab] = useState('patrons');
@@ -16,10 +16,10 @@ export default function CommitteeSection() {
   ];
 
   const organizingChairs = [
-    { name: "Dr. K.A. Mohamed Junaid", role: "Conference Chair", designation: "Principal", affiliation: "R.M.K. Engineering College" },
-    { name: "Dr. T. Suresh", role: "Conference Chair", designation: "HoD / ECE", affiliation: "R.M.K. Engineering College" },
-    { name: "Dr. T.D. Subash", role: "Conference Chair", designation: "Photonics Society, USA", affiliation: "Conference Organizing Chair" },
-    { name: "Dr. S. Koteeswaran", role: "Co-Chair", designation: "HoD / Research", affiliation: "R.M.K. Engineering College" },
+    { name: "Dr. K.A. Mohamed Junaid", role: "Conference Convener Chair", designation: "Principal", affiliation: "R.M.K. Engineering College" },
+    { name: "Dr. T. Suresh", role: "Conference General Chair", designation: "HoD / ECE", affiliation: "R.M.K. Engineering College" },
+    { name: "Dr. T.D. Subash", role: "Conference Organizing Chair", designation: "Photonics Society, USA", affiliation: "" },
+    { name: "Dr. S. Koteeswaran", role: "Conference Co-Chair", designation: "HoD / Research", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. Subha T. D.", role: "Conference Publication Chair", designation: "Faculty Lead", affiliation: "Publication Committee" },
     { name: "Dr. Vidya Lakshmi V", role: "Conference Travel Grant Chair", designation: "Faculty Lead", affiliation: "Travel Grant Committee" },
     { name: "Dr. P.G. Gopinath", role: "Conference Keynote Chair", designation: "Faculty Lead", affiliation: "Keynote & Session Committee" },
@@ -31,6 +31,57 @@ export default function CommitteeSection() {
     { name: "Ms. Priyadharshini S", role: "Conference Web & Social Media Chair", designation: "Faculty Lead", affiliation: "Web & Media Portal" },
     { name: "Mr. Karthikeyan C", role: "Conference Sponsorship Chair", designation: "Faculty Lead", affiliation: "Sponsorship & Partnership" },
     { name: "Ms. Samudha Prathima", role: "Conference Workshops Chair", designation: "Faculty Lead", affiliation: "Workshops & Tutorials" }
+  ];
+
+  const ieeeLiaisons = [
+    {
+      name: "Prof. Perry Shum",
+      role: "Keynote Speaker",
+      designation: "Chair Professor & Fellow",
+      affiliation: "Southern University of Science and Technology, China",
+      honor: "Optical Fiber Sensors & Fiber Photonics Pioneer",
+      image: "/ieee img/Prof Perry Shum.jpeg"
+    },
+    {
+      name: "Prof. Christina Lim",
+      role: "Keynote Speaker",
+      designation: "Professor, Electrical & Electronic Engineering",
+      affiliation: "University of Melbourne, Australia",
+      honor: "Microwave Photonics & Optical Communications Specialist",
+      image: "/ieee img/Prof Christina Lim.jpeg"
+    },
+    {
+      name: "Prof. Peter Delfyett",
+      role: "Keynote Speaker",
+      designation: "Pegasus Professor & Trustee Chair Professor",
+      affiliation: "CREOL, University of Central Florida, USA",
+      honor: "Ultrafast Photonics & Semiconductor Mode-Locked Lasers Expert",
+      image: "/ieee img/Prof. Peter Delfyett.jpeg"
+    },
+    {
+      name: "Dr. Chennupati Jagadish",
+      role: "Keynote Speaker",
+      designation: "Distinguished Professor",
+      affiliation: "Australian National University, Australia",
+      honor: "Photonics Society President 2018 – 2019",
+      image: "/ieee img/Dr. Chennupati Jagadish.jpeg"
+    },
+    {
+      name: "Prof. Chris Miyachi",
+      role: "AI Coalition Liaison",
+      designation: "AI Coalition Liaison",
+      affiliation: "Cambridge, MA, USA",
+      honor: "Artificial Intelligence & Technical Standardization Specialist",
+      image: "/ieee img/Prof Chris Miyachi.jpeg"
+    },
+    {
+      name: "Prof. Gabriella Bosco",
+      role: "Photonics Society Liaison",
+      designation: "Photonics Society Liaison",
+      affiliation: "Politecnico di Torino, Italy",
+      honor: "Optical Communication Systems & Photonics Leader",
+      image: "/ieee img/Prof Gabriella Bosco.jpeg"
+    }
   ];
 
   const advisoryMembers = [
@@ -156,6 +207,17 @@ export default function CommitteeSection() {
             </button>
 
             <button
+              onClick={() => setActiveTab('liaison')}
+              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
+                activeTab === 'liaison'
+                  ? 'bg-[#2563eb] text-white shadow-sm'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              IEEE Liaison ({ieeeLiaisons.length})
+            </button>
+
+            <button
               onClick={() => setActiveTab('advisory')}
               className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
                 activeTab === 'advisory'
@@ -250,7 +312,47 @@ export default function CommitteeSection() {
           </div>
         )}
 
-        {/* Tab 3: Advisory Board */}
+        {/* Tab 3: IEEE Liaison */}
+        {activeTab === 'liaison' && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
+            {filterBySearch(ieeeLiaisons).map((item, idx) => (
+              <article key={idx} className="bg-white rounded-2xl border border-purple-100 shadow-sm hover:shadow-md hover:border-purple-300 transition-all overflow-hidden flex flex-col group">
+                <div className="p-6 space-y-4 flex-1">
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-purple-100 shadow-sm bg-slate-100 flex-shrink-0">
+                      {item.image ? (
+                        <img
+                          src={item.image}
+                          alt={`Portrait of ${item.name}`}
+                          loading="lazy"
+                          decoding="async"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-purple-400">
+                          <User className="w-8 h-8" />
+                        </div>
+                      )}
+                    </div>
+                    <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full text-center leading-tight max-w-[120px] text-purple-700 bg-purple-50 border border-purple-200">
+                      {item.role}
+                    </span>
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-slate-900 leading-snug">{item.name}</h3>
+                    <p className="text-xs font-semibold text-[#2563eb] mt-0.5">{item.designation}</p>
+                    <p className="text-xs text-slate-500 mt-1 leading-snug">{item.affiliation}</p>
+                  </div>
+                  <div className="pt-3 border-t border-slate-100">
+                    <span className="text-[11px] font-medium text-slate-600 leading-tight block">{item.honor}</span>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
+
+        {/* Tab 4: Advisory Board */}
         {activeTab === 'advisory' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 animate-fadeIn">
             {filterBySearch(advisoryMembers).map((item, idx) => (

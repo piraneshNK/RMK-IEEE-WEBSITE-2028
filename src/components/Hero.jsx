@@ -51,7 +51,7 @@ export default function Hero() {
             
             {/* Category Tag */}
             <div className="inline-flex items-center space-x-2 text-xs sm:text-sm font-semibold tracking-wider text-[#2563eb] uppercase">
-              <span>27 APRIL 2028</span>
+              <span>27TH – 28TH APRIL, 2028</span>
               <span className="text-blue-400 font-bold">·</span>
               <span>INTERNATIONAL CONFERENCE</span>
             </div>
@@ -60,19 +60,20 @@ export default function Hero() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
               International <br />
               Conference on <br />
-              <span className="text-[#2563eb]">Photonics AI</span>
+              <span className="text-[#2563eb]">Artificial Intelligence</span> <br />
+              in Photonic Systems
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg sm:text-xl text-slate-600 font-medium italic">
-              Intelligent photonics meets artificial intelligence
+              – intelligent photonics meets AI
             </p>
 
             {/* Event Info Strip */}
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-slate-700 text-sm sm:text-base font-semibold pt-1">
               <div className="inline-flex items-center space-x-2">
                 <Calendar className="w-4 h-4 text-[#2563eb]" />
-                <span>27 April 2028</span>
+                <span>27th – 28th April, 2028</span>
               </div>
               <span className="text-slate-300 font-light hidden sm:inline">|</span>
               <div className="inline-flex items-center space-x-2">

@@ -1,7 +1,16 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Globe, ExternalLink } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Globe, ExternalLink, Linkedin, X } from 'lucide-react';
 
 export default function Footer() {
+  const [showTeam, setShowTeam] = useState(false);
+
+  const team = [
+    { name: "Piranesh NK",       linkedin: "https://www.linkedin.com/in/piranesh" },
+    { name: "Priyadharshini V",  linkedin: "https://www.linkedin.com/in/priyadharshini-v-" },
+    { name: "P Mahan",           linkedin: "https://www.linkedin.com/in/pmahan-profile" },
+    { name: "Mrinalini J",       linkedin: "https://www.linkedin.com/in/mrinalini-jayakumar" },
+  ];
+
   return (
     <footer id="contact" className="bg-[#040e1f] text-slate-400 border-t border-blue-900/50 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,7 +40,7 @@ export default function Footer() {
               <p>
                 Organised by{' '}
                 <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="text-slate-200 hover:text-blue-400 font-bold underline underline-offset-4 decoration-blue-400/40 hover:decoration-blue-400 transition-colors" title="Visit R.M.K. Engineering College Official Website">
-                  R.M.K. Engineering College (Autonomous) — www.rmkec.ac.in
+                  R.M.K. Engineering College
                 </a>
               </p>
             </div>
@@ -119,9 +128,49 @@ export default function Footer() {
             <span>
               Organised by{' '}
               <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 underline transition-colors" title="Visit R.M.K. Engineering College Official Website">
-                R.M.K. Engineering College (www.rmkec.ac.in)
+                R.M.K. Engineering College
               </a>
             </span>
+          </div>
+          <div className="relative">
+            <button
+              onClick={() => setShowTeam(v => !v)}
+              className="text-slate-500 hover:text-blue-400 transition-colors underline underline-offset-2 text-xs"
+            >
+              Designed &amp; Developed by team Apollo
+            </button>
+
+            {showTeam && (
+              <>
+                {/* Backdrop */}
+                <div className="fixed inset-0 z-40" onClick={() => setShowTeam(false)} />
+                {/* Popup */}
+                <div className="absolute bottom-8 right-0 z-50 bg-[#0d1f3c] border border-blue-800/60 rounded-2xl shadow-2xl p-5 w-64">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-white text-xs font-bold uppercase tracking-wider">Team Apollo</span>
+                    <button onClick={() => setShowTeam(false)} className="text-slate-400 hover:text-white transition-colors">
+                      <X className="w-4 h-4" />
+                    </button>
+                  </div>
+                  <ul className="space-y-3">
+                    {team.map((member) => (
+                      <li key={member.name} className="flex items-center justify-between">
+                        <span className="text-slate-200 text-xs font-medium">{member.name}</span>
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title={`${member.name} on LinkedIn`}
+                          className="text-blue-400 hover:text-blue-300 transition-colors"
+                        >
+                          <Linkedin className="w-4 h-4" />
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </>
+            )}
           </div>
         </div>
 

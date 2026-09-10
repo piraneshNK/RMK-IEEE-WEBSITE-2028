@@ -20,37 +20,6 @@ export default function SpeakersSection() {
       image: "/ieee img/Prof Gabriella Bosco.jpeg"
     },
     {
-      name: "Prof. Perry Shum",
-      role: "Keynote Speaker",
-      institution: "Southern University of Science and Technology, China",
-      title: "Chair Professor & Fellow",
-      honor: "Optical Fiber Sensors & Fiber Photonics Pioneer",
-      image: "/ieee img/Prof Perry Shum.jpeg"
-    },
-    {
-      name: "Prof. Christina Lim",
-      role: "Keynote Speaker",
-      institution: "University of Melbourne, Australia",
-      title: "Professor, Electrical & Electronic Engineering",
-      honor: "Microwave Photonics & Optical Communications Specialist",
-      image: "/ieee img/Prof Christina Lim.jpeg"
-    },
-    {
-      name: "Prof. Peter Delfyett",
-      role: "Keynote Speaker",
-      institution: "CREOL, University of Central Florida, USA",
-      title: "Pegasus Professor & Trustee Chair Professor",
-      honor: "Ultrafast Photonics & Semiconductor Mode-Locked Lasers Expert"
-    },
-    {
-      name: "Dr. Chennupati Jagadish",
-      role: "Keynote Speaker",
-      institution: "Australian National University, Australia",
-      title: "Distinguished Professor",
-      honor: "Photonics Society President 2018 – 2019",
-      image: "/ieee img/Dr. Chennupati Jagadish.jpeg"
-    },
-    {
       name: "Prof. Dr. Leong Wai Yie",
       role: "Keynote Speaker",
       institution: "INTI International University, Malaysia",
@@ -154,7 +123,6 @@ export default function SpeakersSection() {
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
           {[
             { id: 'keynote', label: 'Keynote Speakers' },
-            { id: 'liaison', label: 'Keynote Liaisons' },
             { id: 'invited', label: 'Invited Speakers' }
           ].map(tab => (
             <button

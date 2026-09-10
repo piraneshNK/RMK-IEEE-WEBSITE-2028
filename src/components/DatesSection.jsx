@@ -36,7 +36,7 @@ export default function DatesSection() {
   return (
     <section id="dates" className="py-16 lg:py-20 bg-white relative border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
           <div className="inline-flex items-center space-x-2 text-xs font-bold tracking-wider text-[#2563eb] uppercase bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
             <Calendar className="w-3.5 h-3.5" />
@@ -60,11 +60,11 @@ export default function DatesSection() {
               const isEven = idx % 2 === 0;
               return (
                 <div key={idx} className={`flex flex-col sm:flex-row items-center ${isEven ? 'sm:flex-row-reverse' : ''}`}>
-                  
+
                   {/* Content Card */}
                   <div className={`w-full sm:w-1/2 ${isEven ? 'sm:pl-8 text-left' : 'sm:pr-8 sm:text-right'} mb-4 sm:mb-0`}>
                     <article className={`p-6 rounded-2xl border transition-all ${item.active ? 'bg-blue-50/60 border-blue-300 shadow-sm ring-2 ring-blue-500/20' : 'bg-white border-slate-200/80 shadow-sm'}`}>
-                      
+
                       <div className={`flex items-center space-x-2 mb-2 ${isEven ? 'sm:justify-start' : 'sm:justify-end'}`}>
                         <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full ${item.active ? 'bg-[#2563eb] text-white' : 'bg-slate-100 text-slate-700'}`}>
                           {item.status}
@@ -80,10 +80,10 @@ export default function DatesSection() {
                         {item.desc.includes("R.M.K. Engineering College") ? (
                           <>
                             Flagship international conference at{' '}
-                            <a 
-                              href="https://www.rmkec.ac.in/2023/" 
-                              target="_blank" 
-                              rel="noopener noreferrer" 
+                            <a
+                              href="https://www.rmkec.ac.in/2023/"
+                              target="_blank"
+                              rel="noopener noreferrer"
                               className="text-[#2563eb] hover:underline font-semibold"
                               title="Visit R.M.K. Engineering College Home Page"
                             >

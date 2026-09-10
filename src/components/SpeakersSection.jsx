@@ -95,7 +95,7 @@ export default function SpeakersSection() {
     {
       name: "Dr. Sangeetha R. G.",
       role: "Invited Speaker",
-      institution: "VIT Chennai, India",
+      institution: "Sri Sai Ram Engineering College, Chennai",
       title: "Professor, School of Electronics Engineering",
       honor: "Optical Communications & Photonics Expert",
       link: "https://directorycc.vit.ac.in/faculty/50604-sangeetha-r-g",
@@ -104,7 +104,7 @@ export default function SpeakersSection() {
     {
       name: "Brindha Saminathan",
       role: "Invited Speaker",
-      institution: "Sri Sairam Engineering College, Chennai",
+      institution: "Sri Sai Ram Engineering College, Chennai",
       title: "Academic & Research Specialist",
       honor: "Intelligent Sensing Systems Leader",
       image: "/ieee img/Brindha Saminathan.jpeg"
@@ -154,7 +154,8 @@ export default function SpeakersSection() {
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
           {[
             { id: 'keynote', label: 'Keynote Speakers' },
-            { id: 'liaison', label: 'Keynote Liaisons' }
+            { id: 'liaison', label: 'Keynote Liaisons' },
+            { id: 'invited', label: 'Invited Speakers' }
           ].map(tab => (
             <button
               key={tab.id}

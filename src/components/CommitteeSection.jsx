@@ -16,21 +16,21 @@ export default function CommitteeSection() {
   ];
 
   const organizingChairs = [
-    { name: "Dr. K.A. Mohamed Junaid", role: "Conference Convener Chair", designation: "Principal", affiliation: "R.M.K. Engineering College" },
+    { name: "Dr. K.A. Mohamed Junaid", role: "Conference Convener", designation: "Principal", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. T. Suresh", role: "Conference General Chair", designation: "HoD / ECE", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. T.D. Subash", role: "Conference Organizing Chair", designation: "Photonics Society, USA", affiliation: "" },
     { name: "Dr. S. Koteeswaran", role: "Conference Co-Chair", designation: "HoD / Research", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. Subha T. D.", role: "Conference Publication Chair", designation: "Faculty Lead", affiliation: "Publication Committee" },
-    { name: "Dr. Vidya Lakshmi V", role: "Conference Travel Grant Chair", designation: "Faculty Lead", affiliation: "Travel Grant Committee" },
+    { name: "Dr. Gnanasekaran T", role: "Conference Travel Grant Chair", designation: "Faculty Lead", affiliation: "Travel Grant Committee" },
     { name: "Dr. P.G. Gopinath", role: "Conference Keynote Chair", designation: "Faculty Lead", affiliation: "Keynote & Session Committee" },
-    { name: "Dr. Darwin Nesakumar", role: "Conference Publicity Chair", designation: "Faculty Lead", affiliation: "Dissemination & Publicity" },
-    { name: "Dr. V. Balaji", role: "Conference Finance Chair", designation: "Faculty Lead", affiliation: "Finance & Accounts" },
-    { name: "Mr. Babuji R", role: "Conference Local Arrangements Chair", designation: "Faculty Lead", affiliation: "Campus Logistics & Arrangements" },
-    { name: "Dr. Deepa D", role: "Conference Award Chair", designation: "Faculty Lead", affiliation: "Awards & Recognition" },
-    { name: "Ms. G. BHAVANI", role: "Conference Registration Chair", designation: "Faculty Lead", affiliation: "Registration Desk" },
-    { name: "Ms. Priyadharshini S", role: "Conference Web & Social Media Chair", designation: "Faculty Lead", affiliation: "Web & Media Portal" },
-    { name: "Mr. Karthikeyan C", role: "Conference Sponsorship Chair", designation: "Faculty Lead", affiliation: "Sponsorship & Partnership" },
-    { name: "Ms. Samudha Prathima", role: "Conference Workshops Chair", designation: "Faculty Lead", affiliation: "Workshops & Tutorials" }
+    { name: "Dr. S.Vijayalakshmi", role: "Conference Publicity Chair", designation: "Faculty Lead", affiliation: "Dissemination & Publicity" },
+    { name: "Dr. T.Blesslin Sheeba", role: "Conference Finance Chair", designation: "Faculty Lead", affiliation: "Finance & Accounts" },
+    { name: "Dr.V.Balaji", role: "Conference Local Arrangements Chair", designation: "Faculty Lead", affiliation: "Campus Logistics & Arrangements" },
+    { name: "Dr. A.Merline", role: "Conference Award Chair", designation: "Faculty Lead", affiliation: "Awards & Recognition" },
+    { name: "Dr.B.Sarala", role: "Conference Registration Chair", designation: "Faculty Lead", affiliation: "Registration Desk" },
+    { name: "Dr.N.Kalaiarasi", role: "Conference Web & Social Media Chair", designation: "Faculty Lead", affiliation: "Web & Media Portal" },
+    { name: "Dr.A.Darwin NesaKumar", role: "Conference Sponsorship Chair", designation: "Faculty Lead", affiliation: "Sponsorship & Partnership" },
+    { name: "Dr.D.Deepa", role: "Conference Workshops Chair", designation: "Faculty Lead", affiliation: "Workshops & Tutorials" }
   ];
 
   const ieeeLiaisons = [
@@ -159,14 +159,14 @@ export default function CommitteeSection() {
     if (!searchQuery) return list;
     return list.filter(
       item => item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-              (item.affiliation && item.affiliation.toLowerCase().includes(searchQuery.toLowerCase()))
+        (item.affiliation && item.affiliation.toLowerCase().includes(searchQuery.toLowerCase()))
     );
   };
 
   return (
     <section id="committee" className="py-16 lg:py-24 bg-white border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-10">
           <div className="inline-flex items-center space-x-2 text-xs font-bold tracking-wider text-[#2563eb] uppercase bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
@@ -186,66 +186,60 @@ export default function CommitteeSection() {
           <div className="flex flex-wrap justify-center gap-2">
             <button
               onClick={() => setActiveTab('patrons')}
-              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
-                activeTab === 'patrons'
-                  ? 'bg-[#2563eb] text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
+              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${activeTab === 'patrons'
+                ? 'bg-[#2563eb] text-white shadow-sm'
+                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                }`}
             >
               Patrons ({patronsList.length})
             </button>
 
             <button
               onClick={() => setActiveTab('organizing')}
-              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
-                activeTab === 'organizing'
-                  ? 'bg-[#2563eb] text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
+              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${activeTab === 'organizing'
+                ? 'bg-[#2563eb] text-white shadow-sm'
+                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                }`}
             >
               Organizing Chairs ({organizingChairs.length})
             </button>
 
             <button
               onClick={() => setActiveTab('liaison')}
-              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
-                activeTab === 'liaison'
-                  ? 'bg-[#2563eb] text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
+              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${activeTab === 'liaison'
+                ? 'bg-[#2563eb] text-white shadow-sm'
+                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                }`}
             >
               IEEE Liaison ({ieeeLiaisons.length})
             </button>
 
             <button
               onClick={() => setActiveTab('advisory')}
-              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
-                activeTab === 'advisory'
-                  ? 'bg-[#2563eb] text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
+              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${activeTab === 'advisory'
+                ? 'bg-[#2563eb] text-white shadow-sm'
+                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                }`}
             >
               Advisory Board ({advisoryMembers.length})
             </button>
 
             <button
               onClick={() => setActiveTab('tpc')}
-              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
-                activeTab === 'tpc'
-                  ? 'bg-[#2563eb] text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
+              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${activeTab === 'tpc'
+                ? 'bg-[#2563eb] text-white shadow-sm'
+                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                }`}
             >
               TPC ({tpcMembers.length})
             </button>
 
             <button
               onClick={() => setActiveTab('womenInPhotonics')}
-              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
-                activeTab === 'womenInPhotonics'
-                  ? 'bg-[#2563eb] text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
+              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${activeTab === 'womenInPhotonics'
+                ? 'bg-[#2563eb] text-white shadow-sm'
+                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                }`}
             >
               Women in Photonics TPC ({womenInPhotonicsMembers.length})
             </button>

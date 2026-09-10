@@ -7,7 +7,7 @@ export default function TravelSection() {
   const premiumHotels = [
     {
       name: "Taj Coromandel, Chennai",
-      link: "https://www.booking.com/searchresults.html?ss=Taj%20Coromandel%2C%20Chennai%20Chennai",
+      link: "https://www.tajhotels.com/en-in/hotels/taj-coromandel-chennai",
       distance: "40 km",
       tariff: "₹15,000 – ₹22,000"
     },
@@ -73,7 +73,7 @@ export default function TravelSection() {
     },
     {
       name: "MMs Chennai Gateway",
-      link: "https://www.booking.com/searchresults.html?ss=MMs%20Chennai%20Gateway%20Chennai",
+      link: "https://www.hotelmmschennaigateway.com/",
       distance: "33 km",
       tariff: "₹2,000 – ₹3,500"
     },

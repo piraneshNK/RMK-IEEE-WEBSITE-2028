@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, ExternalLink, User } from 'lucide-react';
+import { Award, ExternalLink } from 'lucide-react';
 
 export default function SpeakersSection() {
   const speakers = [
@@ -9,7 +9,7 @@ export default function SpeakersSection() {
       institution: "Cambridge, MA, USA",
       title: "AI Coalition Liaison",
       honor: "Artificial Intelligence & Technical Standardization Specialist",
-      image: "/prof-chris-miyachi.jpg"
+
     },
     {
       name: "Prof. Gabriella Bosco",
@@ -17,7 +17,7 @@ export default function SpeakersSection() {
       institution: "Politecnico di Torino, Italy",
       title: "Photonics Society Liaison",
       honor: "Optical Communication Systems & Photonics Leader",
-      image: "/prof-gabriella-bosco.jpg"
+
     },
     {
       name: "Prof. Perry Shum",
@@ -25,7 +25,7 @@ export default function SpeakersSection() {
       institution: "Southern University of Science and Technology, China",
       title: "Chair Professor & Fellow",
       honor: "Optical Fiber Sensors & Fiber Photonics Pioneer",
-      image: "/prof-perry-shum.jpg"
+
     },
     {
       name: "Prof. Christina Lim",
@@ -33,7 +33,7 @@ export default function SpeakersSection() {
       institution: "University of Melbourne, Australia",
       title: "Professor, Electrical & Electronic Engineering",
       honor: "Microwave Photonics & Optical Communications Specialist",
-      image: "/prof-christina-lim.jpg"
+
     },
     {
       name: "Prof. Peter Delfyett",
@@ -41,7 +41,7 @@ export default function SpeakersSection() {
       institution: "CREOL, University of Central Florida, USA",
       title: "Pegasus Professor & Trustee Chair Professor",
       honor: "Ultrafast Photonics & Semiconductor Mode-Locked Lasers Expert",
-      image: "/peter-delfyett.jpg"
+
     },
     {
       name: "Dr. Chennupati Jagadish",
@@ -49,7 +49,7 @@ export default function SpeakersSection() {
       institution: "Australian National University, Australia",
       title: "Distinguished Professor",
       honor: "Photonics Society President 2018 – 2019",
-      image: "/dr-chennupati-jagadish.png"
+
     },
     {
       name: "Prof. Dr. Leong Wai Yie",
@@ -58,7 +58,7 @@ export default function SpeakersSection() {
       title: "Chair, WFEO Women in Engineering",
       honor: "Senior Member & Engineering Specialist",
       link: "https://leongwaiyie.com/",
-      image: "/prof-leong-wai-yie.jpg"
+
     },
     {
       name: "Prof. Wladyslaw Grabinski",
@@ -66,7 +66,7 @@ export default function SpeakersSection() {
       institution: "MOS AK Association, Switzerland",
       title: "Geneva Modeling Center",
       honor: "Nanotechnology & Compact Modeling Specialist",
-      image: "/prof-wladyslaw-grabinski.png"
+
     },
     {
       name: "Prof. Bikash Nakarmi",
@@ -75,7 +75,7 @@ export default function SpeakersSection() {
       title: "Director, Bnakarmi Lab",
       honor: "Photonic Signal Processing Pioneer",
       link: "https://www.bnakarmilab.com/",
-      image: "/prof-bikash-nakarmi.jpg"
+
     },
     {
       name: "Dr. Manpreet Singh Manna",
@@ -83,7 +83,7 @@ export default function SpeakersSection() {
       institution: "Sant Longowal Institute of Engineering & Technology, Punjab",
       title: "Former Director, AICTE, Govt. of India",
       honor: "Member, United Nations Organization SDG4",
-      image: "/dr-manpreet-singh-manna.png"
+
     },
     {
       name: "Dr. Shrishail Kamble",
@@ -91,7 +91,7 @@ export default function SpeakersSection() {
       institution: "Institutional Development Cell, AICTE",
       title: "Assistant Director",
       honor: "Ministry of Education, New Delhi",
-      image: "/dr-shrishail-kamble.png"
+
     },
     {
       name: "Dr. Sangeetha R. G.",
@@ -100,7 +100,7 @@ export default function SpeakersSection() {
       title: "Professor, School of Electronics Engineering",
       honor: "Optical Communications & Photonics Expert",
       link: "https://directorycc.vit.ac.in/faculty/50604-sangeetha-r-g",
-      image: "/dr-sangeetha.jpg"
+
     },
     {
       name: "Brindha Saminathan",
@@ -108,11 +108,11 @@ export default function SpeakersSection() {
       institution: "Sri Sairam Engineering College, Chennai",
       title: "Academic & Research Specialist",
       honor: "Intelligent Sensing Systems Leader",
-      image: "/brindha-saminathan.jpg"
+
     }
   ];
 
-  const [filter, setFilter] = React.useState('all');
+  const [filter, setFilter] = React.useState('keynote');
 
   const getBadgeStyle = (role) => {
     if (role.includes('Liaison')) {
@@ -154,10 +154,8 @@ export default function SpeakersSection() {
         {/* Filter Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
           {[
-            { id: 'all', label: `All Speakers (${speakers.length})` },
             { id: 'keynote', label: 'Keynote Speakers' },
-            { id: 'liaison', label: 'Keynote Liaisons' },
-            { id: 'invited', label: 'Distinguished & Invited' }
+            { id: 'liaison', label: 'Keynote Liaisons' }
           ].map(tab => (
             <button
               key={tab.id}
@@ -182,29 +180,9 @@ export default function SpeakersSection() {
             >
               <div className="p-6 space-y-4">
                 
-                {/* Photo Header & Role Badge */}
-                <div className="flex items-center justify-between gap-3">
-                  <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-blue-100 shadow-sm bg-slate-100 flex-shrink-0">
-                    {speaker.image ? (
-                      <img
-                        src={speaker.image}
-                        alt={`Portrait of ${speaker.name}, ${speaker.role} at Photonics AI 2028`}
-                        loading="lazy"
-                        decoding="async"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        onError={(e) => {
-                          e.target.onerror = null;
-                          e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400";
-                        }}
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-[#2563eb]">
-                        <User className="w-8 h-8" />
-                      </div>
-                    )}
-                  </div>
-
-                  <span className={`text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full text-center leading-tight max-w-[120px] ${getBadgeStyle(speaker.role)}`}>
+                {/* Role Badge */}
+                <div className="flex items-center justify-end">
+                  <span className={`text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full text-center leading-tight ${getBadgeStyle(speaker.role)}`}>
                     {speaker.role}
                   </span>
                 </div>

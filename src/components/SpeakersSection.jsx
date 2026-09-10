@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, ExternalLink } from 'lucide-react';
+import { Award, ExternalLink, User } from 'lucide-react';
 
 export default function SpeakersSection() {
   const speakers = [
@@ -9,7 +9,7 @@ export default function SpeakersSection() {
       institution: "Cambridge, MA, USA",
       title: "AI Coalition Liaison",
       honor: "Artificial Intelligence & Technical Standardization Specialist",
-
+      image: "/ieee img/Prof Chris Miyachi.jpeg"
     },
     {
       name: "Prof. Gabriella Bosco",
@@ -17,7 +17,7 @@ export default function SpeakersSection() {
       institution: "Politecnico di Torino, Italy",
       title: "Photonics Society Liaison",
       honor: "Optical Communication Systems & Photonics Leader",
-
+      image: "/ieee img/Prof Gabriella Bosco.jpeg"
     },
     {
       name: "Prof. Perry Shum",
@@ -25,7 +25,7 @@ export default function SpeakersSection() {
       institution: "Southern University of Science and Technology, China",
       title: "Chair Professor & Fellow",
       honor: "Optical Fiber Sensors & Fiber Photonics Pioneer",
-
+      image: "/ieee img/Prof Perry Shum.jpeg"
     },
     {
       name: "Prof. Christina Lim",
@@ -33,15 +33,14 @@ export default function SpeakersSection() {
       institution: "University of Melbourne, Australia",
       title: "Professor, Electrical & Electronic Engineering",
       honor: "Microwave Photonics & Optical Communications Specialist",
-
+      image: "/ieee img/Prof Christina Lim.jpeg"
     },
     {
       name: "Prof. Peter Delfyett",
       role: "Keynote Speaker",
       institution: "CREOL, University of Central Florida, USA",
       title: "Pegasus Professor & Trustee Chair Professor",
-      honor: "Ultrafast Photonics & Semiconductor Mode-Locked Lasers Expert",
-
+      honor: "Ultrafast Photonics & Semiconductor Mode-Locked Lasers Expert"
     },
     {
       name: "Dr. Chennupati Jagadish",
@@ -49,7 +48,7 @@ export default function SpeakersSection() {
       institution: "Australian National University, Australia",
       title: "Distinguished Professor",
       honor: "Photonics Society President 2018 – 2019",
-
+      image: "/ieee img/Dr. Chennupati Jagadish.jpeg"
     },
     {
       name: "Prof. Dr. Leong Wai Yie",
@@ -58,7 +57,7 @@ export default function SpeakersSection() {
       title: "Chair, WFEO Women in Engineering",
       honor: "Senior Member & Engineering Specialist",
       link: "https://leongwaiyie.com/",
-
+      image: "/ieee img/Prof. Dr Leong Wai Yie.jpeg"
     },
     {
       name: "Prof. Wladyslaw Grabinski",
@@ -66,7 +65,7 @@ export default function SpeakersSection() {
       institution: "MOS AK Association, Switzerland",
       title: "Geneva Modeling Center",
       honor: "Nanotechnology & Compact Modeling Specialist",
-
+      image: "/ieee img/Prof. Wladyslaw Grabinski.jpeg"
     },
     {
       name: "Prof. Bikash Nakarmi",
@@ -75,7 +74,7 @@ export default function SpeakersSection() {
       title: "Director, Bnakarmi Lab",
       honor: "Photonic Signal Processing Pioneer",
       link: "https://www.bnakarmilab.com/",
-
+      image: "/ieee img/Prof. Bikash Nakarmi.jpeg"
     },
     {
       name: "Dr. Manpreet Singh Manna",
@@ -83,7 +82,7 @@ export default function SpeakersSection() {
       institution: "Sant Longowal Institute of Engineering & Technology, Punjab",
       title: "Former Director, AICTE, Govt. of India",
       honor: "Member, United Nations Organization SDG4",
-
+      image: "/ieee img/Dr. Manpreet Singh Manna.jpeg"
     },
     {
       name: "Dr. Shrishail Kamble",
@@ -91,7 +90,7 @@ export default function SpeakersSection() {
       institution: "Institutional Development Cell, AICTE",
       title: "Assistant Director",
       honor: "Ministry of Education, New Delhi",
-
+      image: "/ieee img/Dr. Shrishail Kamble.jpeg"
     },
     {
       name: "Dr. Sangeetha R. G.",
@@ -100,7 +99,7 @@ export default function SpeakersSection() {
       title: "Professor, School of Electronics Engineering",
       honor: "Optical Communications & Photonics Expert",
       link: "https://directorycc.vit.ac.in/faculty/50604-sangeetha-r-g",
-
+      image: "/ieee img/Dr. Sangeetha R G.jpeg"
     },
     {
       name: "Brindha Saminathan",
@@ -108,7 +107,7 @@ export default function SpeakersSection() {
       institution: "Sri Sairam Engineering College, Chennai",
       title: "Academic & Research Specialist",
       honor: "Intelligent Sensing Systems Leader",
-
+      image: "/ieee img/Brindha Saminathan.jpeg"
     }
   ];
 
@@ -180,9 +179,24 @@ export default function SpeakersSection() {
             >
               <div className="p-6 space-y-4">
                 
-                {/* Role Badge */}
-                <div className="flex items-center justify-end">
-                  <span className={`text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full text-center leading-tight ${getBadgeStyle(speaker.role)}`}>
+                {/* Photo & Role Badge */}
+                <div className="flex items-center justify-between gap-3">
+                  <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-blue-100 shadow-sm bg-slate-100 flex-shrink-0">
+                    {speaker.image ? (
+                      <img
+                        src={speaker.image}
+                        alt={`Portrait of ${speaker.name}`}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-[#2563eb]">
+                        <User className="w-8 h-8" />
+                      </div>
+                    )}
+                  </div>
+                  <span className={`text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full text-center leading-tight max-w-[120px] ${getBadgeStyle(speaker.role)}`}>
                     {speaker.role}
                   </span>
                 </div>

@@ -19,6 +19,7 @@ export default function CommitteeSection() {
     { name: "Dr. K.A. Mohamed Junaid", role: "Conference Chair", designation: "Principal", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. T. Suresh", role: "Conference Chair", designation: "HoD / ECE", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. T.D. Subash", role: "Conference Chair", designation: "Photonics Society, USA", affiliation: "Conference Organizing Chair" },
+    { name: "Dr. S. Koteeswaran", role: "Co-Chair", designation: "HoD / Research", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. Subha T. D.", role: "Conference Publication Chair", designation: "Faculty Lead", affiliation: "Publication Committee" },
     { name: "Dr. Vidya Lakshmi V", role: "Conference Travel Grant Chair", designation: "Faculty Lead", affiliation: "Travel Grant Committee" },
     { name: "Dr. P.G. Gopinath", role: "Conference Keynote Chair", designation: "Faculty Lead", affiliation: "Keynote & Session Committee" },

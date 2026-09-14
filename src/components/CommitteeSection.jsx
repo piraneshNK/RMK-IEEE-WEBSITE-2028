@@ -20,7 +20,7 @@ export default function CommitteeSection() {
     { name: "Dr. T.Suresh", role: "Conference General Chair", designation: "HoD / ECE", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. Y. Sukhi", role: "Conference General Chair", designation: "HoD / EEE", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. A. Swarnalatha", role: "Conference General Chair", designation: "HoD / ECE(VLSI)", affiliation: "R.M.K. Engineering College" },
-    { name: "To Be Updated", role: "Conference General Chair", designation: "HoD / ECE(ACT)", affiliation: "R.M.K. Engineering College" },
+    { name: "Dr. J. Jasmine Hephzipah", role: "Conference General Chair", designation: "HoD / ECE(ACT)", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. K. R. Senthil", role: "Conference General Chair", designation: "HoD / MECH", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. L. Andal", role: "Conference General Chair", designation: "HoD / CIVIL", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. T.D.Subash", role: "Conference Organizing Chair", designation: "Photonics Society, USA", affiliation: "" },

@@ -18,6 +18,11 @@ export default function CommitteeSection() {
   const organizingChairs = [
     { name: "Dr. K.A. Mohamed Junaid", role: "Conference Convener", designation: "Principal", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. T.Suresh", role: "Conference General Chair", designation: "HoD / ECE", affiliation: "R.M.K. Engineering College" },
+    { name: "Dr. Y. Sukhi", role: "Conference General Chair", designation: "HoD / EEE", affiliation: "R.M.K. Engineering College" },
+    { name: "Dr. A. Swarnalatha", role: "Conference General Chair", designation: "HoD / ECE(VLSI)", affiliation: "R.M.K. Engineering College" },
+    { name: "To Be Updated", role: "Conference General Chair", designation: "HoD / ECE(ACT)", affiliation: "R.M.K. Engineering College" },
+    { name: "Dr. K. R. Senthil", role: "Conference General Chair", designation: "HoD / MECH", affiliation: "R.M.K. Engineering College" },
+    { name: "Dr. L. Andal", role: "Conference General Chair", designation: "HoD / CIVIL", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. T.D.Subash", role: "Conference Organizing Chair", designation: "Photonics Society, USA", affiliation: "" },
     { name: "Dr. S. Koteeswaran", role: "Conference Co-Chair", designation: "HoD / Research", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. Subha T. D.", role: "Conference Publication Chair", designation: "Faculty Lead", affiliation: "Publication Committee" },

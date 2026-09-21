@@ -15,6 +15,15 @@ export default function CommitteeSection() {
     { name: "Smt. Sowmya Kishore", role: "Patron", designation: "Management Trustee", affiliation: "R.M.K Group of Institutions" }
   ];
 
+  const coPatronsList = [
+    { name: "Dr. M.S. Palanichamy", role: "Co-Patron", designation: "Advisor", affiliation: "" },
+    { name: "Shri. T. Pitchandi I.A.S", role: "Co-Patron", designation: "Advisor", affiliation: "" },
+    { name: "Shri. V. Manoharan", role: "Co-Patron", designation: "Advisor", affiliation: "" },
+    { name: "Dr. K. K. Sivagnana Prabhu", role: "Co-Patron", designation: "Dean-CDC", affiliation: "" },
+    { name: "Dr. K. Manivannan", role: "Co-Patron", designation: "Dean-External Affairs", affiliation: "" },
+    { name: "Dr. S. Pavai Madheshwari", role: "Co-Patron", designation: "Dean-Academics", affiliation: "" }
+  ];
+
   const organizingChairs = [
     { name: "Dr. K.A. Mohamed Junaid", role: "Conference Convener", designation: "Principal", affiliation: "R.M.K. Engineering College" },
     { name: "Dr. T.Suresh", role: "Conference General Chair", designation: "HoD / ECE", affiliation: "R.M.K. Engineering College" },
@@ -87,6 +96,15 @@ export default function CommitteeSection() {
       honor: "Optical Communication Systems & Photonics Leader",
       image: "/ieee img/Prof Gabriella Bosco.jpeg"
     }
+  ];
+
+  const technicalCoSponsorshipChairs = [
+    { name: "Dr. P. Sakthivel", role: "Chair", affiliation: "IEEE Madras Section" },
+    { name: "Dr. T. Shanmuganantham", role: "Vice Chairman (Academics)", affiliation: "IEEE Madras Section" },
+    { name: "Dr. Ramalatha Marimuthu", role: "Vice Chairman (Industry)", affiliation: "IEEE Madras Section" },
+    { name: "Dr. S. Radha", role: "Secretary", affiliation: "IEEE Madras Section" },
+    { name: "Dr. S. Brindha", role: "Treasurer", affiliation: "IEEE Madras Section" },
+    { name: "Dr. V. Nagarajan", role: "Vice Chair, Conferences", affiliation: "IEEE Madras Section" }
   ];
 
   const advisoryMembers = [
@@ -200,6 +218,16 @@ export default function CommitteeSection() {
             </button>
 
             <button
+              onClick={() => setActiveTab('coPatrons')}
+              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${activeTab === 'coPatrons'
+                ? 'bg-[#2563eb] text-white shadow-sm'
+                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                }`}
+            >
+              Co-Patrons ({coPatronsList.length})
+            </button>
+
+            <button
               onClick={() => setActiveTab('organizing')}
               className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${activeTab === 'organizing'
                 ? 'bg-[#2563eb] text-white shadow-sm'
@@ -217,6 +245,16 @@ export default function CommitteeSection() {
                 }`}
             >
               IEEE Liaison ({ieeeLiaisons.length})
+            </button>
+
+            <button
+              onClick={() => setActiveTab('technicalCoSponsorship')}
+              className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${activeTab === 'technicalCoSponsorship'
+                ? 'bg-[#2563eb] text-white shadow-sm'
+                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                }`}
+            >
+              Technical Co-Sponsorship Chairs ({technicalCoSponsorshipChairs.length})
             </button>
 
             <button
@@ -287,6 +325,32 @@ export default function CommitteeSection() {
           </div>
         )}
 
+        {/* Tab: Co-Patrons */}
+        {activeTab === 'coPatrons' && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 animate-fadeIn">
+            {filterBySearch(coPatronsList).map((item, idx) => (
+              <article key={idx} className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-purple-700 bg-purple-100/60 px-2.5 py-0.5 rounded-full inline-block">
+                  {item.role}
+                </span>
+                <h3 className="font-bold text-slate-900 text-base leading-snug">{item.name}</h3>
+                <p className="text-xs font-medium text-slate-700">{item.designation}</p>
+                {item.affiliation && (
+                  <p className="text-[11px] text-slate-500">
+                    {item.affiliation.includes("R.M.K") ? (
+                      <a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" className="hover:text-[#2563eb] hover:underline transition-colors" title="Visit R.M.K. Engineering College Home Page">
+                        {item.affiliation}
+                      </a>
+                    ) : (
+                      item.affiliation
+                    )}
+                  </p>
+                )}
+              </article>
+            ))}
+          </div>
+        )}
+
         {/* Tab 2: Organizing Chairs */}
         {activeTab === 'organizing' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 animate-fadeIn">
@@ -346,6 +410,22 @@ export default function CommitteeSection() {
                     <span className="text-[11px] font-medium text-slate-600 leading-tight block">{item.honor}</span>
                   </div>
                 </div>
+              </article>
+            ))}
+          </div>
+        )}
+
+        {/* Tab: Technical Co-Sponsorship Chairs */}
+        {activeTab === 'technicalCoSponsorship' && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 animate-fadeIn max-w-5xl mx-auto">
+            {filterBySearch(technicalCoSponsorshipChairs).map((item, idx) => (
+              <article key={idx} className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#2563eb] bg-blue-100/60 px-2.5 py-0.5 rounded-full inline-block">
+                  Technical Co-Sponsorship
+                </span>
+                <h3 className="font-bold text-slate-900 text-base leading-snug">{item.name}</h3>
+                <p className="text-xs font-semibold text-slate-700">{item.role}</p>
+                <p className="text-[11px] text-slate-500">{item.affiliation}</p>
               </article>
             ))}
           </div>

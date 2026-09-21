@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { 
-  Sliders, 
-  Cpu, 
-  Network, 
-  Eye, 
-  Layers, 
-  Sparkles, 
-  Atom, 
-  Flame, 
-  HeartPulse, 
-  Grid, 
-  Radio, 
-  Globe, 
-  ArrowRight, 
-  Check 
+import {
+  Sliders,
+  Cpu,
+  Network,
+  Eye,
+  Layers,
+  Sparkles,
+  Atom,
+  Flame,
+  HeartPulse,
+  Grid,
+  Radio,
+  Globe,
+  ArrowRight,
+  Check
 } from 'lucide-react';
 
 export default function TracksSection() {
@@ -23,7 +23,6 @@ export default function TracksSection() {
     {
       title: "AI/ML for Photonic Design and Optimization",
       icon: Sliders,
-      summary: "Leveraging machine learning, deep neural networks, and automated inverse algorithms to revolutionize optical simulation and device geometry optimization.",
       topics: [
         "AI/ML-assisted photonic device design",
         "Inverse design and topology optimization",
@@ -39,7 +38,6 @@ export default function TracksSection() {
     {
       title: "Photonic Computing and AI Hardware",
       icon: Cpu,
-      summary: "Cutting-edge hardware architectures utilizing light for high-throughput, low-latency, and energy-efficient AI model execution and matrix operations.",
       topics: [
         "Optical computing architectures",
         "Photonic AI accelerators",
@@ -56,7 +54,6 @@ export default function TracksSection() {
     {
       title: "AI-Enabled Optical Communications and Networks",
       icon: Network,
-      summary: "Intelligent optical transport systems, fiber nonlinearity mitigation, and autonomous self-optimizing network infrastructure for next-gen telecom.",
       topics: [
         "Machine learning for optical communications",
         "Intelligent optical networks",
@@ -74,7 +71,6 @@ export default function TracksSection() {
     {
       title: "Intelligent Photonic Sensing and Imaging",
       icon: Eye,
-      summary: "Advanced imaging modalities, computational reconstruction, and intelligent sensor fusion empowered by edge and computer vision algorithms.",
       topics: [
         "AI-enabled optical sensors",
         "Machine learning for fiber-optic sensing",
@@ -92,7 +88,6 @@ export default function TracksSection() {
     {
       title: "AI for Integrated Photonics and Silicon Photonics",
       icon: Layers,
-      summary: "Scalable silicon-on-insulator circuits, automated photonic PDKs, co-packaged optics, and heterogeneously integrated electro-photonic chips.",
       topics: [
         "AI-assisted photonic integrated circuit design",
         "Silicon photonics",
@@ -109,7 +104,6 @@ export default function TracksSection() {
     {
       title: "Generative AI, Foundation Models and Agentic Photonics",
       icon: Sparkles,
-      summary: "Autonomous discovery agents, multimodal foundation architectures, and physics-informed generative models transforming experimental and theoretical photonics.",
       topics: [
         "Generative AI for photonic design",
         "Large language models for photonics",
@@ -126,7 +120,6 @@ export default function TracksSection() {
     {
       title: "Quantum Photonics and AI",
       icon: Atom,
-      summary: "Intersection of quantum information and machine learning, quantum neural networks, photon error mitigation, and integrated quantum circuits.",
       topics: [
         "Quantum machine learning",
         "Photonic quantum computing",
@@ -143,7 +136,6 @@ export default function TracksSection() {
     {
       title: "AI for Lasers, Nonlinear and Ultrafast Photonics",
       icon: Flame,
-      summary: "Self-tuning optical frequency combs, ultrafast nonlinear waveform synthesis, pulse control, and data-driven dynamics of extreme optical phenomena.",
       topics: [
         "ML-assisted laser design",
         "Intelligent laser control",
@@ -160,7 +152,6 @@ export default function TracksSection() {
     {
       title: "AI-Enabled Biomedical and Biophotonics",
       icon: HeartPulse,
-      summary: "Translational biophotonics, non-invasive optical biopsy, smart biosensors, and AI-accelerated OCT/microscopy for clinical diagnosis.",
       topics: [
         "AI for biomedical imaging",
         "Optical diagnostics",
@@ -177,7 +168,6 @@ export default function TracksSection() {
     {
       title: "Emerging Materials, Metasurfaces and Nanophotonics",
       icon: Grid,
-      summary: "Subwavelength optics, 2D Van der Waals materials, inverse-designed topological interfaces, and reconfigurable flat-optics platforms.",
       topics: [
         "AI-designed metasurfaces",
         "Nanophotonics",
@@ -194,7 +184,6 @@ export default function TracksSection() {
     {
       title: "Optical Wireless, LiDAR, Radar and Intelligent Perception",
       icon: Radio,
-      summary: "Microwave photonics, free-space optical interconnects, multi-sensor perception fusion, and robust photonic systems for aerospace and autonomous transit.",
       topics: [
         "AI-enabled LiDAR",
         "Optical wireless communications",
@@ -212,7 +201,6 @@ export default function TracksSection() {
     {
       title: "AI, Photonics and Next-Generation Applications",
       icon: Globe,
-      summary: "Societal and industrial impact covering smart cities, environmental sustainability, high-performance computing, and optical cybersecurity.",
       topics: [
         "AI-enabled smart cities",
         "Autonomous systems and robotics",
@@ -232,7 +220,7 @@ export default function TracksSection() {
   return (
     <section id="tracks" className="py-16 lg:py-24 bg-slate-50 border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
           <span className="text-xs font-bold tracking-wider text-[#2563eb] uppercase">
@@ -248,7 +236,7 @@ export default function TracksSection() {
 
         {/* Tracks selector */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Left Column: Track Navigation */}
           <div className="lg:col-span-5 space-y-2 max-h-[640px] overflow-y-auto pr-1">
             {tracks.map((track, index) => {
@@ -258,11 +246,10 @@ export default function TracksSection() {
                 <button
                   key={index}
                   onClick={() => setActiveTrack(index)}
-                  className={`w-full text-left p-3.5 sm:p-4 rounded-xl transition-all duration-150 flex items-center justify-between border ${
-                    isSelected
+                  className={`w-full text-left p-3.5 sm:p-4 rounded-xl transition-all duration-150 flex items-center justify-between border ${isSelected
                       ? 'bg-white border-[#2563eb] shadow-sm text-slate-900 font-bold'
                       : 'bg-white/70 border-slate-200 text-slate-700 hover:bg-white'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center space-x-3 min-w-0 pr-2">
                     <div className={`p-2 rounded-lg flex-shrink-0 ${isSelected ? 'bg-[#2563eb] text-white' : 'bg-slate-100 text-slate-600'}`}>
@@ -290,10 +277,6 @@ export default function TracksSection() {
             <h3 className="text-2xl font-extrabold text-slate-900">
               Track {activeTrack + 1}: {tracks[activeTrack].title}
             </h3>
-
-            <p className="text-slate-600 text-sm leading-relaxed">
-              {tracks[activeTrack].summary}
-            </p>
 
             <div className="space-y-3 pt-2">
               <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider">

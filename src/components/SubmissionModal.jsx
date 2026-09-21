@@ -22,7 +22,7 @@ export default function SubmissionModal({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-fadeIn">
       <div className="bg-white rounded-3xl max-w-lg w-full border border-slate-200 shadow-2xl overflow-hidden relative flex flex-col max-h-[90vh]">
-        
+
         {/* Header */}
         <div className="bg-blue-600 text-white p-6 flex items-center justify-between">
           <div className="flex items-center space-x-2">

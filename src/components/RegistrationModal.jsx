@@ -44,7 +44,7 @@ export default function RegistrationModal({ isOpen, onClose }) {
             />
             <div>
               <h3 className="font-extrabold text-lg leading-tight">Conference Registration</h3>
-              <p className="text-xs text-blue-300">Photonics AI 2028 · April 27-28, 2028</p>
+              <p className="text-xs text-blue-300">Photonics AI 2028 · March 22-23, 2028</p>
             </div>
           </div>
 

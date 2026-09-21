@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Calendar, MapPin } from 'lucide-react';
 
 export default function Hero() {
-  // Target Conference Date: April 27, 2028 09:00 IST
-  const targetDate = Date.parse('2028-04-27T09:00:00+05:30');
+  // Target Conference Date: March 22, 2028 09:00 IST
+  const targetDate = Date.parse('2028-03-22T09:00:00+05:30');
 
   const [timeLeft, setTimeLeft] = useState(() => {
     const now = Date.now();
@@ -51,7 +51,7 @@ export default function Hero() {
             
             {/* Category Tag */}
             <div className="inline-flex items-center space-x-2 text-xs sm:text-sm font-semibold tracking-wider text-[#2563eb] uppercase">
-              <span>27TH – 28TH APRIL, 2028</span>
+              <span>22ND – 23RD MARCH, 2028</span>
               <span className="text-blue-400 font-bold">·</span>
               <span>INTERNATIONAL CONFERENCE</span>
             </div>
@@ -73,7 +73,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-slate-700 text-sm sm:text-base font-semibold pt-1">
               <div className="inline-flex items-center space-x-2">
                 <Calendar className="w-4 h-4 text-[#2563eb]" />
-                <span>27th – 28th April, 2028</span>
+                <span>22nd – 23rd March, 2028</span>
               </div>
               <span className="text-slate-300 font-light hidden sm:inline">|</span>
               <div className="inline-flex items-center space-x-2">

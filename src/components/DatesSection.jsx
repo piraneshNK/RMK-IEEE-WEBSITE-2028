@@ -26,7 +26,7 @@ export default function DatesSection() {
     },
     {
       title: "Conference Days",
-      date: "27–28 APR 2028",
+      date: "22–23 MAR 2028",
       status: "Main Event",
       active: false,
       desc: "Flagship international conference at R.M.K. Engineering College Campus, Chennai, India."

@@ -94,12 +94,18 @@ export default function SubmissionModal({ isOpen, onClose }) {
                   onChange={(e) => setTrack(e.target.value)}
                   className="w-full px-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-500 text-sm bg-white"
                 >
-                  <option value="Track 1">Track 1: Optical Computing & AI Accelerators</option>
-                  <option value="Track 2">Track 2: Photonic Neural Networks</option>
-                  <option value="Track 3">Track 3: Quantum Photonics & Sensing</option>
-                  <option value="Track 4">Track 4: Neuromorphic Photonics</option>
-                  <option value="Track 5">Track 5: Integrated Nanophotonics</option>
-                  <option value="Track 6">Track 6: AI for Optical Communications</option>
+                  <option value="Track 1">Track 1: AI/ML for Photonic Design and Optimization</option>
+                  <option value="Track 2">Track 2: Photonic Computing and AI Hardware</option>
+                  <option value="Track 3">Track 3: AI-Enabled Optical Communications and Networks</option>
+                  <option value="Track 4">Track 4: Intelligent Photonic Sensing and Imaging</option>
+                  <option value="Track 5">Track 5: AI for Integrated Photonics and Silicon Photonics</option>
+                  <option value="Track 6">Track 6: Generative AI, Foundation Models and Agentic Photonics</option>
+                  <option value="Track 7">Track 7: Quantum Photonics and AI</option>
+                  <option value="Track 8">Track 8: AI for Lasers, Nonlinear and Ultrafast Photonics</option>
+                  <option value="Track 9">Track 9: AI-Enabled Biomedical and Biophotonics</option>
+                  <option value="Track 10">Track 10: Emerging Materials, Metasurfaces and Nanophotonics</option>
+                  <option value="Track 11">Track 11: Optical Wireless, LiDAR, Radar and Intelligent Perception</option>
+                  <option value="Track 12">Track 12: AI, Photonics and Next-Generation Applications</option>
                 </select>
               </div>
 

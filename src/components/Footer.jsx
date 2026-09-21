@@ -105,7 +105,7 @@ export default function Footer() {
               <div className="flex items-start space-x-2">
                 <Mail className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
                 <div className="flex flex-col space-y-0.5">
-                  <a href="mailto:subhash.ec@rmkec.ac.in" className="hover:text-white text-blue-300 font-semibold">subhash.ec@rmkec.ac.in</a>
+                  <a href="mailto:subash.ece@rmkec.ac.in" className="hover:text-white text-blue-300 font-semibold">subash.ece@rmkec.ac.in</a>
                   <a href="mailto:tdsubash2007@gmail.com" className="hover:text-white text-blue-300 font-semibold">tdsubash2007@gmail.com</a>
                 </div>
               </div>

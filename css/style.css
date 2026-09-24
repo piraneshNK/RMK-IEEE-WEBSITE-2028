@@ -3205,3 +3205,164 @@ button, input, select, textarea {
     opacity: 0;
   }
 }
+
+
+/* ==========================================================
+   FIXED LIVE VISITOR FLAG COUNTER
+   White horizontal mobile-navbar style
+   ========================================================== */
+
+#fixed-flag-counter {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 6px 6px;
+  margin: 0;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.flag-counter-box {
+  width: 100%;
+  max-width: 760px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 8px 14px;
+  margin: 0;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #d9dfe8;
+  border-radius: 10px;
+  box-shadow: 0 -3px 18px rgba(0, 0, 0, 0.18);
+  pointer-events: auto;
+}
+
+.flag-counter-title {
+  flex: 0 0 auto;
+  color: #111827;
+  font-size: 19px;
+  line-height: 1;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.flag-counter-countries {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0;
+  margin: 0;
+  scrollbar-width: none;
+}
+
+.flag-counter-countries::-webkit-scrollbar {
+  display: none;
+}
+
+.flag-counter-countries .flag-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex: 0 0 auto;
+  min-width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.flag-counter-countries .flag-box:hover {
+  border: none;
+  background: transparent;
+}
+
+.flag-counter-countries .flag-box-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: auto;
+  overflow: visible;
+}
+
+.flag-counter-countries .flag-box-left img {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.flag-counter-countries .flag-country-name {
+  max-width: none;
+  color: #111827;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.flag-counter-countries .flag-count-badge {
+  display: inline;
+  min-width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #111827;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+@media (max-width: 600px) {
+  #fixed-flag-counter {
+    padding: 0 4px 4px;
+  }
+
+  .flag-counter-box {
+    max-width: none;
+    min-height: 46px;
+    gap: 12px;
+    padding: 7px 10px;
+    border-radius: 9px;
+  }
+
+  .flag-counter-title {
+    font-size: 16px;
+  }
+
+  .flag-counter-countries {
+    gap: 12px;
+  }
+
+  .flag-counter-countries .flag-box-left img {
+    width: 20px;
+    height: 14px;
+  }
+
+  .flag-counter-countries .flag-country-name,
+  .flag-counter-countries .flag-count-badge {
+    font-size: 11px;
+  }
+}

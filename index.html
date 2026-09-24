@@ -1705,15 +1705,15 @@
     </section>
 
     <!-- =======================================================================
-         GLOBAL LIVE VISITOR FLAG COUNTER SECTION
+         GLOBAL VISITOR FLAG COUNTER SECTION
          ======================================================================= -->
-    <section class="counter-section">
-      <div class="container">
+    <section class="counter-section" style="width: 100%; padding: 2rem 0;">
+      <div class="container" style="width: 100%; max-width: 100%; padding: 0 1.5rem;">
 
-        <div class="counter-widget">
+        <div class="counter-widget" style="width: 100%; text-align: center; align-items: center; box-sizing: border-box;">
 
           <!-- Widget Header -->
-          <div class="counter-header">
+          <div class="counter-header" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
             <div class="counter-header-left">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -1721,29 +1721,27 @@
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
                 </path>
               </svg>
-              <h3 class="counter-title">Global Live Visitor Flag Counter</h3>
+              <h3 class="counter-title">Global Visitor Flag Counter</h3>
             </div>
 
-            <div class="counter-badge-pill">
+            <div style="font-size: 0.75rem; color: #93c5fd; font-weight: 600; display: flex; align-items: center; gap: 0.35rem;">
               <span class="pulse-dot">
                 <span class="ping"></span>
                 <span class="dot"></span>
               </span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-              </svg>
-              <span>Active Delegates Online:</span>
-              <span class="counter-badge-white" id="live-total-active">1</span>
+              <span>Live Flag Analytics</span>
             </div>
           </div>
 
-          <!-- 16 Target Country Flags Grid -->
-          <div class="counter-flags-grid" id="live-flags-grid">
-            <!-- Rendered by js/firebase-counter.js -->
+          <!-- Flag Counter Widget (Horizontally Full Width) -->
+          <div class="counter-content-wrapper" style="padding: 1.25rem 0; display: flex; justify-content: center; align-items: center; width: 100%; overflow-x: auto;">
+            <a href="http://s01.flagcounter.com/more/HcX" target="_blank" rel="noopener noreferrer" style="display: inline-block; max-width: 100%;">
+              <img src="https://s01.flagcounter.com/count2/HcX/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_16/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0" style="max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);">
+            </a>
           </div>
 
-          <div class="counter-footer">
-            <span>Real-time Geolocation Flag Tracker for Representing Countries</span>
+          <div class="counter-footer" style="width: 100%; display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748b; border-top: 1px solid rgba(30, 58, 138, 0.5); padding-top: 0.75rem;">
+            <span>International Geolocation Flag Tracker for Representing Countries</span>
             <span>Photonics AI 2028</span>
           </div>
 
@@ -2185,14 +2183,8 @@
     </div>
   </div>
 
-  <!-- Firebase Web SDK Compat (Non-blocking CDN script tags) -->
-<script type="module" src="js/firebase-counter.js"></script>
-<script src="js/main.js"></script>
-
-  <!-- Pure Scripts -->
-  <script src="js/firebase-counter.js"></script>
+  <!-- Scripts -->
   <script src="js/main.js"></script>
-
 </body>
 
 </html>

@@ -598,13 +598,13 @@ function initCommittee() {
       contentContainer.innerHTML = `
         <div class="committee-grid">
           ${filtered.map(item => {
-            const isPurple = currentTab === 'patrons' || currentTab === 'coPatrons';
-            const pillClass = isPurple ? 'purple' : 'blue';
-            const affilHtml = item.isRMK
-              ? `<a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" title="Visit R.M.K. Engineering College">${item.affiliation}</a>`
-              : (item.affiliation || '');
+        const isPurple = currentTab === 'patrons' || currentTab === 'coPatrons';
+        const pillClass = isPurple ? 'purple' : 'blue';
+        const affilHtml = item.isRMK
+          ? `<a href="https://www.rmkec.ac.in/2023/" target="_blank" rel="noopener noreferrer" title="Visit R.M.K. Engineering College">${item.affiliation}</a>`
+          : (item.affiliation || '');
 
-            return `
+        return `
               <article class="committee-card">
                 <span class="comm-pill ${pillClass}">${item.role}</span>
                 <h3 class="comm-name">${item.name}</h3>
@@ -612,7 +612,7 @@ function initCommittee() {
                 ${affilHtml ? `<p class="comm-affil">${affilHtml}</p>` : ''}
               </article>
             `;
-          }).join('')}
+      }).join('')}
         </div>
       `;
     }

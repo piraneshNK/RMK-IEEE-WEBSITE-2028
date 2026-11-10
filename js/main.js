@@ -4,7 +4,7 @@
  */
 
 // Target Conference Date: March 22, 2028 09:00 IST
-const TARGET_DATE = Date.parse('2028-03-22T09:00:00+05:30');
+const TARGET_DATE = new Date("2028-03-22T09:00:00+05:30").getTime();
 
 // 12 Technical Research Tracks Data
 const TRACKS_DATA = [
@@ -340,11 +340,11 @@ const COMMITTEE_DATA = {
     { name: "Veena Raj", affiliation: "Universiti Brunei Darussalam, Brunei" }
   ]
 };
-
 // DOM Content Loaded Handler
 document.addEventListener('DOMContentLoaded', () => {
   initCountdown();
   initNavbar();
+  initSubmissionPageViews();
   initAboutExpander();
   initTracks();
   initSpeakersFilter();
@@ -361,73 +361,151 @@ function initCountdown() {
   const minutesEl = document.getElementById('count-mins');
   const secondsEl = document.getElementById('count-secs');
 
+  // Stop if this page does not contain the countdown.
   if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
   function update() {
-    const now = Date.now();
-    const diff = TARGET_DATE - now;
+    const diff = TARGET_DATE - Date.now();
 
-    if (diff > 0) {
-      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const s = Math.floor((diff % (1000 * 60)) / 1000);
-
-      daysEl.textContent = String(d).padStart(3, '0');
-      hoursEl.textContent = String(h).padStart(2, '0');
-      minutesEl.textContent = String(m).padStart(2, '0');
-      secondsEl.textContent = String(s).padStart(2, '0');
-    } else {
+    if (diff <= 0) {
       daysEl.textContent = '000';
       hoursEl.textContent = '00';
       minutesEl.textContent = '00';
       secondsEl.textContent = '00';
+      return;
     }
+
+    const totalSeconds = Math.floor(diff / 1000);
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    daysEl.textContent = String(days).padStart(3, '0');
+    hoursEl.textContent = String(hours).padStart(2, '0');
+    minutesEl.textContent = String(minutes).padStart(2, '0');
+    secondsEl.textContent = String(seconds).padStart(2, '0');
   }
 
+  // Show the correct values immediately, then refresh every second.
   update();
   setInterval(update, 1000);
 }
 
 /* 2. Navbar & Dropdown & Mobile Menu */
 function initNavbar() {
-  const moreDropdown = document.getElementById('more-dropdown');
-  const moreTrigger = document.getElementById('more-trigger');
   const mobileToggle = document.getElementById('mobile-toggle');
   const mobileDrawer = document.getElementById('mobile-drawer');
 
-  // MORE dropdown
-  if (moreTrigger && moreDropdown) {
-    moreTrigger.addEventListener('click', (e) => {
+  // MORE and SUBMISSION dropdowns share identical interaction behavior.
+  [
+    { dropdown: document.getElementById('more-dropdown'), trigger: document.getElementById('more-trigger') },
+    {
+      dropdown: document.getElementById('submission-dropdown') || document.getElementById('sub-dropdown'),
+      trigger: document.getElementById('submission-trigger') || document.getElementById('sub-trigger')
+    }
+  ].forEach(({ dropdown, trigger }) => {
+    if (!dropdown || !trigger) return;
+
+    trigger.addEventListener('click', (e) => {
       e.stopPropagation();
-      moreDropdown.classList.toggle('open');
+
+      document.querySelectorAll('#more-dropdown.open, #submission-dropdown.open, #sub-dropdown.open')
+        .forEach(openDropdown => {
+          if (openDropdown !== dropdown) {
+            openDropdown.classList.remove('open');
+            const otherTrigger = openDropdown.querySelector('.dropdown-trigger');
+            if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+      const isOpen = dropdown.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', String(isOpen));
     });
 
     document.addEventListener('click', (e) => {
-      if (!moreDropdown.contains(e.target)) {
-        moreDropdown.classList.remove('open');
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
       }
     });
-  }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        dropdown.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
 
   // Mobile menu drawer
   if (mobileToggle && mobileDrawer) {
     mobileToggle.addEventListener('click', () => {
       mobileDrawer.classList.toggle('open');
       const isOpen = mobileDrawer.classList.contains('open');
+      mobileToggle.setAttribute('aria-expanded', String(isOpen));
       mobileToggle.innerHTML = isOpen
         ? `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`
         : `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
     });
 
-    // Close mobile menu on link click
     mobileDrawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileDrawer.classList.remove('open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
         mobileToggle.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
       });
     });
   }
+}
+
+/* Submission page: switch content using the URL hash */
+function initSubmissionPageViews() {
+  const views = {
+    reviewers: ['Call for Reviewers', 'Join our review panel and help maintain the quality of the conference proceedings.'],
+    'camera-ready': ['Camera-Ready Paper Preparation', 'Instructions for authors of accepted papers.'],
+    registration: ['Registration', 'Registration fees (including GST) and payment details.']
+  };
+
+  // Do nothing on index.html.
+  if (!document.getElementById('view-reviewers')) return;
+
+  const title = document.getElementById('sp-title');
+  const crumb = document.getElementById('sp-crumb');
+  const subtitle = document.getElementById('sp-sub');
+
+  function renderView() {
+    let key = window.location.hash.slice(1);
+    if (!views[key]) key = 'reviewers';
+
+    Object.keys(views).forEach((viewKey) => {
+      const panel = document.getElementById('view-' + viewKey);
+      if (panel) panel.classList.toggle('active', viewKey === key);
+    });
+
+    if (title) title.textContent = views[key][0];
+    if (crumb) crumb.textContent = views[key][0];
+    if (subtitle) subtitle.textContent = views[key][1];
+    document.title = views[key][0] + ' | Photonics AI 2028';
+
+    document.querySelectorAll('[data-view]').forEach((link) => {
+      link.classList.toggle('current', link.getAttribute('data-view') === key);
+    });
+
+    document.querySelectorAll('#submission-dropdown.open, #sub-dropdown.open, #more-dropdown.open')
+      .forEach(dropdown => {
+        dropdown.classList.remove('open');
+        const trigger = dropdown.querySelector('.dropdown-trigger');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      });
+
+    const drawer = document.getElementById('mobile-drawer');
+    if (drawer && window.innerWidth < 900) drawer.classList.remove('open');
+    window.scrollTo(0, 0);
+  }
+
+  window.addEventListener('hashchange', renderView);
+  renderView();
 }
 
 /* 3. About Section Expander */

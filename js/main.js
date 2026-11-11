@@ -20,7 +20,7 @@ const TRACKS_DATA = [
       "AI-assisted PIC design and optimization",
       "Automated photonic design workflows"
     ],
-    chairs: "To be announced"
+    chairs: "Dr. Anupma Thakur, IISC, Bangalore, India"
   },
   {
     title: "Photonic Computing and AI Hardware",
@@ -35,7 +35,7 @@ const TRACKS_DATA = [
       "In-memory photonic computing",
       "Energy-efficient AI hardware"
     ],
-    chairs: "To be announced"
+    chairs: "Dr Bikash Nagarmi, Nanjing University of Aeronautics & Astronautics, China"
   },
   {
     title: "AI-Enabled Optical Communications and Networks",
@@ -51,7 +51,7 @@ const TRACKS_DATA = [
       "Data-center optical interconnects",
       "Photonics for AI infrastructure"
     ],
-    chairs: "To be announced"
+    chairs: "Dr Rudra Sankar Dhar, NIT, Mizoram, India"
   },
   {
     title: "Intelligent Photonic Sensing and Imaging",
@@ -67,7 +67,7 @@ const TRACKS_DATA = [
       "Multimodal photonic sensing",
       "Edge AI for sensing"
     ],
-    chairs: "To be announced"
+    chairs: "Dr Aviru Kumar Basu, IIT Kharagpur, India"
   },
   {
     title: "AI for Integrated Photonics and Silicon Photonics",
@@ -82,7 +82,7 @@ const TRACKS_DATA = [
       "Co-packaged optics",
       "AI-enabled photonic systems"
     ],
-    chairs: "To be announced"
+    chairs: "Prof Srinivas Talabattula, IISC, Bangalore, India"
   },
   {
     title: "Generative AI, Foundation Models and Agentic Photonics",
@@ -97,7 +97,7 @@ const TRACKS_DATA = [
       "Physics-informed generative AI",
       "AI-assisted fabrication and process optimization"
     ],
-    chairs: "To be announced"
+    chairs: "Dr. Nithyanandan Kanagaraj, IIIT, Hyderabad, India"
   },
   {
     title: "Quantum Photonics and AI",
@@ -112,7 +112,7 @@ const TRACKS_DATA = [
       "AI for quantum error mitigation",
       "Hybrid quantum-classical photonic systems"
     ],
-    chairs: "To be announced"
+    chairs: "Dr Pramod Gopinath, CUST, Kerala, India"
   },
   {
     title: "AI for Lasers, Nonlinear and Ultrafast Photonics",
@@ -127,7 +127,7 @@ const TRACKS_DATA = [
       "AI-assisted optical frequency combs",
       "Adaptive and autonomous optical systems"
     ],
-    chairs: "To be announced"
+    chairs: "Prof Deepa Venkitesh, IIT, Madras, India"
   },
   {
     title: "AI-Enabled Biomedical and Biophotonics",
@@ -142,7 +142,7 @@ const TRACKS_DATA = [
       "Photonics for healthcare",
       "AI-enabled point-of-care systems"
     ],
-    chairs: "To be announced"
+    chairs: "Dr Sooraj Ravindran, IIST, Kerala, India"
   },
   {
     title: "Emerging Materials, Metasurfaces and Nanophotonics",

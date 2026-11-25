@@ -6255,12 +6255,8 @@ button, input, select, textarea {
   border: 1px solid #cbd5e1;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
   display: inline-block;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.flag-counter-card-box:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+  cursor: default;
+  pointer-events: none;
 }
 
 .flag-counter-card-box img {
@@ -6363,3 +6359,275 @@ button, input, select, textarea {
     gap: 1.5rem;
   }
 }
+
+/* =========================================================================
+   FLOATING / HANGING SUBMISSION PORTAL RIBBON (HOME PAGE)
+   ========================================================================= */
+.cmt-hanging-banner-wrapper {
+  position: sticky;
+  top: 5rem;
+  z-index: 45;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  margin-bottom: -2.75rem;
+  padding: 0 1rem;
+}
+
+.cmt-hanging-pill {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #1d4ed8 100%);
+  color: #ffffff;
+  padding: 0.6rem 1.35rem 0.65rem;
+  border-radius: 0 0 1.125rem 1.125rem;
+  border: 1px solid rgba(147, 197, 253, 0.45);
+  border-top: none;
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.45), 0 4px 10px -2px rgba(15, 23, 42, 0.25);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  animation: cmtFloatPulse 3s ease-in-out infinite;
+}
+
+.cmt-hanging-pill:hover {
+  transform: translateY(2px);
+  box-shadow: 0 14px 30px -5px rgba(37, 99, 235, 0.6), 0 6px 14px -2px rgba(15, 23, 42, 0.3);
+  color: #ffffff;
+}
+
+.cmt-hanging-dot {
+  position: relative;
+  display: inline-flex;
+  width: 0.625rem;
+  height: 0.625rem;
+  flex-shrink: 0;
+}
+
+.cmt-hanging-dot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background-color: #4ade80;
+  animation: cmtPing 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.cmt-hanging-dot::after {
+  content: "";
+  position: relative;
+  display: inline-flex;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 9999px;
+  background-color: #22c55e;
+}
+
+.cmt-hanging-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #ffffff;
+  color: #1e3a8a;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  white-space: nowrap;
+}
+
+@keyframes cmtPing {
+  75%, 100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes cmtFloatPulse {
+  0%, 100% {
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.45), 0 4px 10px -2px rgba(15, 23, 42, 0.25);
+  }
+  50% {
+    box-shadow: 0 12px 28px -3px rgba(59, 130, 246, 0.65), 0 4px 12px -2px rgba(15, 23, 42, 0.3);
+  }
+}
+
+@media (max-width: 640px) {
+  .cmt-hanging-banner-wrapper {
+    margin-bottom: -2.25rem;
+  }
+  .cmt-hanging-pill {
+    font-size: 0.725rem;
+    padding: 0.5rem 0.9rem 0.55rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* =========================================================================
+   WEBNOVA DEVELOPER TEAM PAGE & FOOTER CREDIT LINK
+   ========================================================================= */
+.footer-webnova-link {
+  color: #60a5fa;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.footer-webnova-link:hover {
+  color: #93c5fd;
+}
+
+.webnova-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 1.75rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.webnova-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.webnova-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px -8px rgba(37, 99, 235, 0.16);
+}
+
+.webnova-card-accent {
+  height: 4px;
+  background: linear-gradient(90deg, #1d4ed8, #2563eb, #60a5fa);
+  width: 100%;
+}
+
+.webnova-photo-box {
+  width: 100%;
+  aspect-ratio: 4 / 4.6;
+  background: #ffffff;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.75rem 0.75rem 0;
+}
+
+.webnova-photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 0.75rem 0.75rem 0 0;
+  background: #ffffff;
+}
+
+.webnova-body {
+  padding: 1.35rem 1.35rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.webnova-role-pill {
+  display: inline-block;
+  width: fit-content;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  margin-bottom: 0.6rem;
+}
+
+.webnova-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+  margin: 0 0 0.2rem;
+}
+
+.webnova-dept {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0 0 0.75rem;
+}
+
+.webnova-bio {
+  font-size: 0.825rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  flex: 1 1 auto;
+}
+
+.webnova-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-bottom: 1.125rem;
+}
+
+.webnova-tags span {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #334155;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.175rem 0.55rem;
+  border-radius: 0.375rem;
+}
+
+.webnova-social-row {
+  padding-top: 0.875rem;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.webnova-linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: 100%;
+  background: #0a66c2;
+  color: #ffffff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 0.55rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.webnova-linkedin-btn:hover {
+  background: #004182;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+
